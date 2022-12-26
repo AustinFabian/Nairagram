@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container createAccount">
+      <!-- nav -->
+      <nav>
+        <img src="./images&svg/Logo (1).svg" alt="" />
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./howItWorks.html">How it works</a></li>
+          <li><a class="active" href="./aboutUs.html">About us</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+
+        <div>
+          <a href="">Sign in</a>
+          <a class="btn-bg-green" href="">Create free account</a>
+        </div>
+      </nav>
+
+      <!--  -->
+
+      <div class="flex">
+        <div>
+          <div>
+            <p class="lato32px">Send money in 3 easy steps 💸</p>
+            <p>Send money in 3 easy steps 💸</p>
+          </div>
+
+          <div>
+            <img src="./images&svg/partner.png" alt="" />
+            <img src="./images&svg/natTheatre.svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div class="loginForm">
+            <form id="loginForm" action="">
+              <p class="p1">Create Your Account</p>
+
+              <p class="error-message">
+                Please enter a valid email or password
+              </p>
+              <div class="mb-3 d-flex flex-column myformgroup">
+                <div class="myform-control">
+                  <label for="firstName" class="forEmail">First Name</label>
+                  <input
+                    required
+                    name="firstName"
+                    class="loginEmail"
+                    placeholder="First Name"
+                    type="text"
+                  />
+                  <span class="error">Please enter a valid email address</span>
+                </div>
+
+                <div class="myform-control">
+                  <label for="lastName" class="forEmail">last Name</label>
+                  <input
+                    required
+                    name="lastName"
+                    class="loginEmail"
+                    placeholder="last Name"
+                    type="text"
+                  />
+                  <span class="error">Please enter a valid email address</span>
+                </div>
+
+                <div class="myform-control">
+                  <label for="email" class="forEmail">Email Address</label>
+                  <input
+                    required
+                    name="email"
+                    class="loginEmail"
+                    placeholder="Email Address"
+                    type="text"
+                  />
+                  <span class="error">Please enter a valid email address</span>
+                </div>
+
+                <div class="myform-control">
+                  <i class="fa fa-eye toggle" aria-hidden="true"></i>
+                  <label for="password" class="forPassword">Password</label>
+                  <input
+                    required
+                    name="password"
+                    class="loginPassword"
+                    placeholder="Password"
+                    type="password"
+                  />
+                  <span class="error">Please enter a password</span>
+                </div>
+
+                <div class="myform-control">
+                  <i class="fa fa-eye toggle" aria-hidden="true"></i>
+                  <label for="confirmPassword" class="forPassword">Confirm Password</label>
+                  <input
+                    required
+                    name="confirmPassword"
+                    class="loginPassword"
+                    placeholder="Confirm Password"
+                    type="password"
+                  />
+                  <span class="error">Please enter a password</span>
+                </div>
+
+                <p class="p00">
+                    <span>Have a refferal code?</span>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </p>
+
+                <div>
+                  <input
+                    required
+                    name="lastName"
+                    class="referral main"
+                    placeholder="Referral Code"
+                    type="text"
+                  />
+                </div>
+
+                <span class="check">
+                  <span><input type="checkbox" name="" id=""></span><span> I accept <a href="">Terms and conditions</a></span>
+                </span>
+
+                <button type="submit" class="sign_in">Sign Up</button>
+
+                <p>Have a Nairagram account?<a href="">Sign In</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

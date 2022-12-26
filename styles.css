@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -56,6 +55,10 @@ nav div a {
   padding: 10px;
 }
 
+nav div a:hover{
+  color: #026224;
+}
+
 .btn-bg-green {
   width: 210px;
   height: 50px;
@@ -64,6 +67,10 @@ nav div a {
   text-align: center;
   background-color: #038c33;
   padding: 15px 20px;
+}
+
+.btn-bg-green:hover{
+  background: #026224;
 }
 
 /* body1 div section styling */
@@ -167,6 +174,13 @@ nav div a {
 
 .lato48px {
   font-size: 48px;
+  font-weight: 900;
+  color: #272a2b;
+  text-align: center;
+}
+
+.lato32px{
+  font-size: 32px;
   font-weight: 900;
   color: #272a2b;
   text-align: center;
@@ -652,3 +666,350 @@ footer {
   color: #038c33;
   transition: .5s all ease;
 }
+
+/* loginForm styling */
+
+.loginForm {
+  height: 100vh;
+  background: #f1f3f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loginForm form {
+  height: 436px;
+  width: 450px;
+  padding: 0 20px;
+  box-shadow: 0px 4px 8px rgba(145, 150, 153, 0.25);
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginForm form .p1 {
+  margin: 50px 0;
+  font-size: 24px;
+  color: #5e6366;
+  font-weight: 700;
+}
+
+.loginForm form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loginForm form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #5a9272;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginEmail::placeholder,
+.loginPassword::placeholder {
+  color: #9ca1a3;
+  font-size: 14px;
+}
+
+.loginForm2::placeholder {
+  color: red;
+}
+
+.loginForm form .p00 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loginForm form .p00 .p000 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loginForm form .p00 .p000 input {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  border: 3px solid;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.loginForm form button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #038c33;
+  font-weight: 700;
+  outline: none;
+  transition: all ease-in-out 0.2s;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.loginForm form button:hover{
+  background-color: #026224;
+}
+
+.loginForm form p:last-child{
+  text-align: center;
+  font-size: 14px;
+  color: #272a2b;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loginForm form p:last-child a{
+  font-weight: 700;
+  color: #272a2b;
+}
+
+.error-message {
+  width: 100%;
+  height: 24px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #f44336;
+  background-color: #ffebee;
+  margin: 10px 0 30px 0;
+}
+
+form .myform-control {
+  position: relative;
+}
+
+form .myform-control input {
+  width: 100%;
+  height: 45px;
+  padding: 0px 8px;
+  border: 1px solid #769485;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #272a2b;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none solid rgb(39, 42, 43);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.023231999999997754);
+}
+form .myform-control label {
+  transition: 0.5s all;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+}
+form .myform-control i {
+  position: absolute;
+  top: 10px;
+  color: #c5c9cc;
+  font-size: 24px;
+  right: 10px;
+}
+
+.myformgroup .p00 {
+  color: #3e4345;
+  font-size: 14px;
+}
+
+form .myform-control label{
+  font-weight: 700;
+}
+
+form .myform-control:not(.activeInput) label {
+  display: none;
+}
+form .myform-control:not(.error) span.error {
+  display: none;
+}
+form .myform-control.error input {
+  border: 1px solid #f44336 !important;
+  background-color: #ffebee !important;
+  color: #f44336;
+  text-decoration: none solid rgb(39, 42, 43);
+}
+form .myform-control.error span.error {
+  font-size: 12px;
+  color: #f44336;
+  text-decoration: none solid rgb(244, 67, 54);
+}
+
+/* Open account page */
+
+.createAccount .flex{
+  gap: 0;
+  padding: 0;
+}
+
+.createAccount .flex > div{
+  height: 983px;
+}
+
+.createAccount .flex > div:first-child{
+  width: 44%;
+  background: black;
+  background: #9ad1ad;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.createAccount .flex > div:last-child{
+  width: 56%;
+  background: black;
+}
+
+.createAccount .flex > div:first-child > div:last-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+}
+
+.createAccount .flex > div:first-child > div:first-child > .lato32px{
+  padding: 72px 86px 30px 72px;
+}
+
+.createAccount .flex > div:first-child > div:first-child > p:nth-child(2){
+  font-size: 16px;
+  color: #272a2b;
+  text-align: center;
+}
+
+.createAccount .flex > div:first-child > div:last-child img:nth-child(2){
+  width: 100%;
+}
+
+.createAccount .loginForm{
+  background: white;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.createAccount .loginForm form{
+  box-shadow: none;
+
+}
+
+.createAccount .loginForm form div{
+  gap: 20px;
+}
+
+.createAccount .loginForm form .check{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.createAccount .loginForm form .check span a{
+  text-decoration: underline;
+  color: #038c33;
+  font-weight: 700;
+}
+
+.createAccount .loginForm form .check span input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
+.main{
+  display: none;
+}
+
+/* toogle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 31px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 1px;
+  left: 0;
+  bottom: 4px;
+  background-color: #5e6366;
+}
+
+input:checked + .slider {
+  background-color: #dadada;;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* slide */
+.slide:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 1px;
+  left: 0;
+  bottom: 4px;
+  background-color: #038c33;
+}
+
+input:checked + .slide {
+  background-color: #e9f9ee;
+}
+
+
+
+
+
+

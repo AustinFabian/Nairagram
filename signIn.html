@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container aboutUs">
+      <!-- nav -->
+      <nav>
+        <img src="./images&svg/Logo (1).svg" alt="" />
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./howItWorks.html">How it works</a></li>
+          <li><a href="./aboutUs.html">About us</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+
+        <div>
+          <a href="">Sign in</a>
+          <a class="btn-bg-green" href="">Create free account</a>
+        </div>
+      </nav>
+
+      <!-- login form -->
+
+      <div class="loginForm">
+        <form id="loginForm" action="">
+          <p class="p1">Log in</p>
+
+          <p class="error-message">Please enter a valid email or password</p>
+          <div class="mb-3 d-flex flex-column myformgroup">
+            <div class="myform-control">
+              <label for="email" class="forEmail">Email Address</label>
+              <input
+                required
+                name="email"
+                class="loginEmail"
+                placeholder="Email Address"
+                type="text"
+              />
+              <span class="error">Please enter a valid email address</span>
+            </div>
+            <div class="myform-control">
+              <i class="fa fa-eye toggle" aria-hidden="true"></i>
+              <label for="password" class="forPassword">Password</label>
+              <input
+                required
+                name="password"
+                class="loginPassword"
+                placeholder="Password"
+                type="password"
+              />
+              <span class="error">Please enter a password</span>
+            </div>
+            <p class="p00">
+              <span class="p000">
+                <input
+                  required
+                  name="checkbox"
+                  title=""
+                  placeholder="p"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
+                <label for="checkbox"></label>
+                <span>Remember me</span>
+              </span>
+              <span> Forgot password? </span>
+            </p>
+
+            <button type="submit" class="sign_in">Log in</button>
+
+            <p>New to Nairagram?<a href="">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
