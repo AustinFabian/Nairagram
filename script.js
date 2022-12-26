@@ -65,7 +65,7 @@ $(document).ready(function () {
 
   // referral and toogle
   $(".slider").click(function () {
-    $(".referral").toggleClass("main");
+    $(".referral").fadeToggle();
     $(this).toggleClass("slide");
   });
 });
