@@ -942,8 +942,8 @@ form .myform-control.error span.error {
 .switch {
   position: relative;
   display: inline-block;
-  width: 55px;
-  height: 31px;
+  width: 47px;
+  height: 27px;
 }
 
 .switch input { 
@@ -965,8 +965,8 @@ form .myform-control.error span.error {
 .slider:before {
   position: absolute;
   content: "";
-  height: 30px;
-  width: 30px;
+  height: 26px;
+  width: 26px;
   top: 1px;
   left: 0;
   bottom: 4px;
@@ -980,7 +980,7 @@ input:checked + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  transform: translateX(20px);
 }
 
 /* Rounded sliders */
@@ -996,8 +996,8 @@ input:checked + .slider:before {
 .slide:before {
   position: absolute;
   content: "";
-  height: 30px;
-  width: 30px;
+  height: 26px;
+  width: 26px;
   top: 1px;
   left: 0;
   bottom: 4px;
