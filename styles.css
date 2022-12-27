@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,8 +7,20 @@
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 100vw;
 }
 
 .container > * {
@@ -55,7 +67,7 @@ nav div a {
   padding: 10px;
 }
 
-nav div a:hover{
+nav div a:hover {
   color: #026224;
 }
 
@@ -69,7 +81,7 @@ nav div a:hover{
   padding: 15px 20px;
 }
 
-.btn-bg-green:hover{
+.btn-bg-green:hover {
   background: #026224;
   color: white;
 }
@@ -79,14 +91,14 @@ nav div a:hover{
 .body1 {
   display: flex;
   height: 827px;
-  padding-top: 70px;
+  padding: 75px 112px;
   justify-content: space-between;
   background-image: url(./images&svg/Above\ the\ fold.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.body1 div:nth-child(1) {
+.body1 > div:nth-child(1) {
   /* width: 47%; */
   color: #fff;
   display: flex;
@@ -131,11 +143,248 @@ nav div a:hover{
 
 .body1 form {
   height: 685px;
-  width: 433px;
+  width: 453px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(94, 99, 102, 0.25);
   padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+form .country > div:nth-child(1) {
+  /* flex-grow: 1; */
+  display: flex;
+  gap: 75px;
+}
+
+form .country > div .click {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 48px;
+  cursor: pointer;
+}
+
+form .country > span {
+  color: black;
+  font-size: 18px;
+}
+
+form .country div .click span {
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+form .country div .fa {
+  color: #000000;
+  font-size: 20px;
+  color: #c5c9cc;
+  transition: 0.2s all ease;
+}
+
+form .country div:hover .fa {
+  color: green;
+}
+
+/* HTML CSS DROPDOWN */
+
+.dropdown {
+  width:clamp(360px,27.3%,600px);
+  min-height: 200px;
+  position: absolute;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #f8f9f9;
+  display: none;
+  background: #fff;
+  z-index: 999;
+}
+
+.dropdown > * {
+  width: 100%;
+}
+
+.dropdown .search {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f8f9f9;
+}
+
+.dropdown .search input {
+  width: 100%;
+  padding: 0px 8px 0px 30px;
+  height: 44px;
+  font-size: 14px;
+  color: #3e4345;
+  border-radius: 28px;
+  border: 1px solid #e3e5e5;
+  outline: none;
+}
+
+.dropdown .search input::placeholder {
+  color: #c8cccf;
+}
+
+.dropdown .countries {
+  padding: 10px 0;
+  height: 190px;
+  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.dropdown .countries > * {
+  padding: 8px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.dropdown .countries > *:hover {
+  background: #e9f9ee;
+  color: #026224;
+}
+
+/*  */
+
+.payment {
+  height: 58px;
+  border: 1px solid #e3e5e5;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #5e6366;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 21px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.payment .fa {
+  font-size: 22px;
+}
+
+.paymentDropdown {
+  width:clamp(360px,27.3%,600px);
+  min-height: 200px;
+  position: absolute;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #f8f9f9;
+  background: #fff;
+  display: none;
+  z-index: 777;
+}
+
+.paymentDropdown > * {
+  height: 58px;
+  border: 1px solid #e3e5e5;
+  font-size: 20px;
+  color: #5e6366;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+
+.paymentDropdown > * .fa {
+  color: #919699;
+  transition: 0.4s all ease;
+}
+
+.paymentDropdown > *:hover,
+.paymentDropdown > *:hover .fa {
+  background: #f6f8f9;
+  color: #038c33;
+}
+
+.paymentDropdown div:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+/*  */
+div.sendRec{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.sendRec span{
+  font-size: 14px;
+  color: #272a2b;
+}
+
+.little{
+  font-size: 14px;
+  color: #272a2b;
+}
+
+p.spread{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.space{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.sendRec > div{
+  display: flex;
+}
+
+div.sendRec > div input{
+  flex-grow: 1;
+  border: 1px solid;
+  border-color: #e3e5e5;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #3e4345;
+  outline: none;
+}
+
+div.sendRec > div p{
+  height: 52px;
+  padding: 20px 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-color: #e3e5e5;
+}
+
+/* button */
+
+.body1 form button{
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #038c33;
+  font-size: 18px;
+  color: #ffffff;
+  outline: none;
+  border: none;
 }
 
 /* div body2 and body3 section styling */
@@ -180,7 +429,7 @@ nav div a:hover{
   text-align: center;
 }
 
-.lato32px{
+.lato32px {
   font-size: 32px;
   font-weight: 900;
   color: #272a2b;
@@ -492,7 +741,6 @@ footer {
   gap: 10px;
 }
 
-.body1,
 .body2,
 .body3,
 .body4,
@@ -632,7 +880,7 @@ footer {
   padding-top: 30px;
 }
 
-.faq .main1 ul{
+.faq .main1 ul {
   list-style-type: none;
   padding-top: 61px;
   padding-bottom: 231px;
@@ -642,7 +890,7 @@ footer {
   min-height: 30px;
 } */
 
-.faq .main1 ul li p{
+.faq .main1 ul li p {
   padding: 20px 30px;
   font-size: 20px;
   display: flex;
@@ -654,7 +902,7 @@ footer {
   cursor: pointer;
 }
 
-.faq .main1 ul li div{
+.faq .main1 ul li div {
   padding: 20px 20px 20px 75px;
   display: flex;
   align-items: center;
@@ -662,16 +910,16 @@ footer {
   display: none;
 }
 
-.faq .main1 ul li p .fa{
+.faq .main1 ul li p .fa {
   font-size: 23px;
   color: #038c33;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 /* loginForm styling */
 
 .loginForm {
-  height: 100vh;
+  min-height: 100vh;
   background: #f1f3f4;
   display: flex;
   align-items: center;
@@ -680,7 +928,7 @@ footer {
 }
 
 .loginForm form {
-  height: 436px;
+  min-height: 436px;
   width: 450px;
   padding: 0 20px;
   box-shadow: 0px 4px 8px rgba(145, 150, 153, 0.25);
@@ -730,14 +978,14 @@ footer {
   justify-content: space-between;
   width: 100%;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .loginForm form .p00 .p000 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .loginForm form .p00 .p000 input {
@@ -760,22 +1008,22 @@ footer {
   font-weight: 700;
   outline: none;
   transition: all ease-in-out 0.2s;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 
-.loginForm form button:hover{
+.loginForm form button:hover {
   background-color: #026224;
 }
 
-.loginForm form p:last-child{
+.loginForm form p:last-child {
   text-align: center;
   font-size: 14px;
   color: #272a2b;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.loginForm form p:last-child a{
+.loginForm form p:last-child a {
   font-weight: 700;
   color: #272a2b;
 }
@@ -807,7 +1055,7 @@ form .myform-control input {
   background-color: #ffffff;
   font-size: 14px;
   color: #272a2b;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none solid rgb(39, 42, 43);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.023231999999997754);
 }
@@ -830,7 +1078,7 @@ form .myform-control i {
   font-size: 14px;
 }
 
-form .myform-control label{
+form .myform-control label {
   font-weight: 700;
 }
 
@@ -854,16 +1102,16 @@ form .myform-control.error span.error {
 
 /* Open account page */
 
-.createAccount .flex{
+.createAccount .flex {
   gap: 0;
   padding: 0;
 }
 
-.createAccount .flex > div{
+.createAccount .flex > div {
   height: 983px;
 }
 
-.createAccount .flex > div:first-child{
+.createAccount .flex > div:first-child {
   width: 44%;
   background: black;
   background: #9ad1ad;
@@ -874,48 +1122,47 @@ form .myform-control.error span.error {
   gap: 200px;
 }
 
-.createAccount .flex > div:last-child{
+.createAccount .flex > div:last-child {
   width: 56%;
   background: black;
 }
 
-.createAccount .flex > div:first-child > div:last-child{
+.createAccount .flex > div:first-child > div:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 54px;
 }
 
-.createAccount .flex > div:first-child > div:first-child > .lato32px{
+.createAccount .flex > div:first-child > div:first-child > .lato32px {
   padding: 72px 86px 30px 72px;
 }
 
-.createAccount .flex > div:first-child > div:first-child > p:nth-child(2){
+.createAccount .flex > div:first-child > div:first-child > p:nth-child(2) {
   font-size: 16px;
   color: #272a2b;
   text-align: center;
 }
 
-.createAccount .flex > div:first-child > div:last-child img:nth-child(2){
+.createAccount .flex > div:first-child > div:last-child img:nth-child(2) {
   width: 100%;
 }
 
-.createAccount .loginForm{
+.createAccount .loginForm {
   background: white;
   justify-content: flex-start;
   height: 100%;
 }
 
-.createAccount .loginForm form{
+.createAccount .loginForm form {
   box-shadow: none;
-
 }
 
-.createAccount .loginForm form div{
+.createAccount .loginForm form div {
   gap: 20px;
 }
 
-.createAccount .loginForm form .check{
+.createAccount .loginForm form .check {
   display: flex;
   align-items: center;
   text-align: start;
@@ -923,19 +1170,19 @@ form .myform-control.error span.error {
   font-size: 14px;
 }
 
-.createAccount .loginForm form .check span a{
+.createAccount .loginForm form .check span a {
   text-decoration: underline;
   color: #038c33;
   font-weight: 700;
 }
 
-.createAccount .loginForm form .check span input[type="checkbox"]{
+.createAccount .loginForm form .check span input[type="checkbox"] {
   width: 18px;
   height: 18px;
   border: none;
 }
 
-.main{
+.main {
   display: none;
 }
 
@@ -947,7 +1194,7 @@ form .myform-control.error span.error {
   height: 27px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -975,7 +1222,7 @@ form .myform-control.error span.error {
 }
 
 input:checked + .slider {
-  background-color: #dadada;;
+  background-color: #dadada;
 }
 
 input:checked + .slider:before {
@@ -1008,9 +1255,3 @@ input:checked + .slider:before {
 input:checked + .slide {
   background-color: #e9f9ee;
 }
-
-
-
-
-
-

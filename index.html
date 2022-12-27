@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
@@ -26,7 +27,9 @@
 
         <div>
           <a href="./signIn.html">Sign in</a>
-          <a class="btn-bg-green" href="./createAccount.html">Create free account</a>
+          <a class="btn-bg-green" href="./createAccount.html"
+            >Create free account</a
+          >
         </div>
       </nav>
 
@@ -45,10 +48,92 @@
           </div>
         </div>
         <form action="">
-          <p>
-            <span>Send to</span>
-            
+          <div class="country">
+            <div>
+              <span>Send to</span>
+
+              <div class="click">
+                <span
+                  ><img src="./images&svg/nigeria.svg" alt="" /> Nigeria</span
+                >
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div class="search">
+                <input type="text" placeholder="Search" />
+              </div>
+              <div class="countries">
+                <div><img src="./images&svg/benin.svg" alt="" /> Benin</div>
+                <div><img src="./images&svg/ghana.svg" alt="" /> Ghana</div>
+                <div><img src="./images&svg/nigeria.svg" alt="" /> Nigeria</div>
+                <div><img src="./images&svg/senegal.svg" alt="" /> Senegal</div>
+                <div>
+                  <img src="./images&svg/southAfrica.svg" alt="" /> South Africa
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- select -->
+
+          <div class="select">
+            <div class="payment">
+              <span>Select Service</span>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+            <div class="paymentDropdown">
+              <div>
+                <i class="fa fa-university" aria-hidden="true"></i> Bank
+                Transfer
+              </div>
+              <div>
+                <i class="fa fa-mobile" aria-hidden="true"></i> Mobile Wallet
+              </div>
+              <div>
+                <i class="fa fa-money" aria-hidden="true"></i> Cash Pickup
+              </div>
+              <div><i class="fa fa-phone" aria-hidden="true"></i> Airtime</div>
+            </div>
+          </div>
+
+          <!--  -->
+
+          <div class="sendRec">
+            <span class="little">You send</span>
+            <div>
+              <input type="number" />
+              <p>USD</p>
+            </div>
+          </div>
+
+          <p class="spread">
+            <span class="little"> Exchange rate: </span>
+            <span> 100 USD </span>
           </p>
+
+          <div class="sendRec">
+            <span class="little">Recipient gets</span>
+            <div>
+              <input type="number" />
+              <p>NGN</p>
+            </div>
+          </div>
+
+          <div class="space">
+            <p class="spread">
+              <span class="little"> Fee: </span>
+              <span> 420.00000000000006 </span>
+            </p>
+
+            <p class="spread">
+              <span class="little"> Total Amount: </span>
+              <span> 6420 USD </span>
+            </p>
+          </div>
+
+          <button>Send</button>
         </form>
       </div>
 
@@ -238,7 +323,7 @@
             alt=""
           />
           <div class="forQr">
-            <img src="./images&svg/qr.png" alt="">
+            <img src="./images&svg/qr.png" alt="" />
           </div>
         </div>
         <div>
@@ -265,12 +350,20 @@
             </li>
             <li>
               <p>Email</p>
-              <p><a href="mailto:info@mynairagram.com">info@mynairagram.com</a></p>
+              <p>
+                <a href="mailto:info@mynairagram.com">info@mynairagram.com</a>
+              </p>
             </li>
             <div>
-              <div><a href=""><i class="fa fa-facebook"></i></a></div>
-              <div><a href=""><i class="fa fa-twitter"></i></a></div>
-              <div><a href=""><i class="fa fa-instagram"></i></a></div>
+              <div>
+                <a href=""><i class="fa fa-facebook"></i></a>
+              </div>
+              <div>
+                <a href=""><i class="fa fa-twitter"></i></a>
+              </div>
+              <div>
+                <a href=""><i class="fa fa-instagram"></i></a>
+              </div>
             </div>
           </ul>
           <ul>
@@ -292,8 +385,8 @@
         </div>
 
         <a href="#" class="scrollUp">
-            <span>^</span>
-            <p>Top</p>
+          <span>^</span>
+          <p>Top</p>
         </a>
       </div>
 
@@ -302,6 +395,7 @@
         <p>©2022 ALL Rights Reserved</p>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

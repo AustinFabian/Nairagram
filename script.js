@@ -55,7 +55,8 @@ $(document).ready(function () {
   // form submits
   $("#loginForm").submit(function (e) {
     e.preventDefault();
-    $(this).css("height", "480px");
+    $(this).css("height", "500px");
+    $(".fa").css("margin", "0");
     $(this)
       .find(".myform-control")
       .removeClass("activeInput")
@@ -67,5 +68,15 @@ $(document).ready(function () {
   $(".slider").click(function () {
     $(".referral").fadeToggle();
     $(this).toggleClass("slide");
+  });
+
+  // country
+  $(".click").click(function () {
+    $(".dropdown").fadeToggle();
+  });
+
+  // Payment System
+  $(".payment").click(function () {
+    $(".paymentDropdown").fadeIn();
   });
 });
