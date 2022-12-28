@@ -159,6 +159,11 @@ form .country > div:nth-child(1) {
   gap: 75px;
 }
 
+form > .country{
+  width: 100%;
+  position: relative;
+}
+
 form .country > div .click {
   flex-grow: 1;
   display: flex;
@@ -196,7 +201,7 @@ form .country div:hover .fa {
 /* HTML CSS DROPDOWN */
 
 .dropdown {
-  width:clamp(360px,27.3%,600px);
+  width: 100%;
   min-height: 200px;
   position: absolute;
   border-bottom-right-radius: 10px;
@@ -256,6 +261,11 @@ form .country div:hover .fa {
 
 /*  */
 
+.body1 form .select{
+  width: 100%;
+  position: relative;
+}
+
 .payment {
   height: 58px;
   border: 1px solid #e3e5e5;
@@ -275,8 +285,8 @@ form .country div:hover .fa {
   font-size: 22px;
 }
 
-.paymentDropdown {
-  width:clamp(360px,27.3%,600px);
+.payment-dropdown {
+  width: 100%;;
   min-height: 200px;
   position: absolute;
   border-bottom-right-radius: 10px;
@@ -287,7 +297,7 @@ form .country div:hover .fa {
   z-index: 777;
 }
 
-.paymentDropdown > * {
+.payment-dropdown > * {
   height: 58px;
   border: 1px solid #e3e5e5;
   font-size: 20px;
@@ -300,29 +310,34 @@ form .country div:hover .fa {
   transition: 0.4s all ease;
 }
 
-.paymentDropdown > * .fa {
+.payment-dropdown > * .fa {
   color: #919699;
   transition: 0.4s all ease;
 }
 
-.paymentDropdown > *:hover,
-.paymentDropdown > *:hover .fa {
+.payment-dropdown > *:hover,
+.payment-dropdown > *:hover .fa {
   background: #f6f8f9;
   color: #038c33;
 }
 
-.paymentDropdown div:last-child {
+.payment-dropdown div:last-child {
   border-radius: 0 0 10px 10px;
 }
 
+.payment span{
+  display: flex;
+  gap: 20px;
+}
+
 /*  */
-div.sendRec{
+div.sendrec{
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-div.sendRec span{
+div.sendrec span{
   font-size: 14px;
   color: #272a2b;
 }
@@ -344,11 +359,11 @@ div.space{
   gap: 20px;
 }
 
-div.sendRec > div{
+div.sendrec > div{
   display: flex;
 }
 
-div.sendRec > div input{
+div.sendrec > div input{
   flex-grow: 1;
   border: 1px solid;
   border-color: #e3e5e5;
@@ -362,7 +377,7 @@ div.sendRec > div input{
   outline: none;
 }
 
-div.sendRec > div p{
+div.sendrec > div p{
   height: 52px;
   padding: 20px 30px;
   border-top-right-radius: 5px;
@@ -563,16 +578,16 @@ div.sendRec > div p{
   gap: 10px;
 }
 
-.body4 .flex1 .afterRating p {
+.body4 .flex1 .after-rating p {
   font-size: 16px;
   color: #272a2b;
 }
 
-.body4 .flex1 .afterRating p:nth-child(1) {
+.body4 .flex1 .after-rating p:nth-child(1) {
   font-weight: 700;
 }
 
-.body4 .flex1 .afterRating p:nth-child(2) {
+.body4 .flex1 .after-rating p:nth-child(2) {
   font-weight: 100;
 }
 
@@ -614,7 +629,7 @@ div.sendRec > div p{
   width: 444px;
 }
 
-.forQr {
+.forqr {
   height: 175px;
   width: 176px;
   background: #fff;
@@ -625,7 +640,7 @@ div.sendRec > div p{
   padding: 15px;
 }
 
-.forQr img {
+.forqr img {
   height: 100%;
   width: 100%;
 }

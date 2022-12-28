@@ -65,39 +65,36 @@ $(document).ready(function () {
     $(this).toggleClass("slide");
   });
 
-  // country
+  // Dropdown
   $(".click").click(function () {
-    $(this).parent().siblings(".dropdown").fadeToggle();
+    if ($(this).attr("class").includes("payment")) {
+      $(this).parent().siblings(".dropdown").fadeIn();
+    } else {
+      $(this).parent().siblings(".dropdown").fadeToggle();
+    }
   });
 
-  var country = $(".countries div");
-  $.each(country, function (index, value) {
-    $(value).click(function () {
-      var img = $(this).children("img").attr("src");
-      var countryName = $(this).text();
-      var currency = $(this).attr("currency");
+  var options = $(".options div");
 
-      $(".countryFlag").attr("src", img);
-      $(".countrySpan").text(countryName);
+  $.each(options, function (index, value) {
+    $(this).click(function () {
+      if ($(this).parent().attr("class").includes("payment-dropdown")) {
+        var innerHtml = $(this).html();
+        $(this).parent().siblings("div").find("span").html(innerHtml);
+      } else {
+        var innerHtml = $(this).html();
+        var currency = $(this).attr("currency");
+        $(this)
+          .parent()
+          .parent()
+          .siblings("div")
+          .find(".countryspan")
+          .html(innerHtml);
 
-      $(".currencyChange").text(currency);
+        $(".currencychange").text(currency);
+      }
 
       $(".dropdown").fadeOut();
-    });
-  });
-
-  // Payment System
-  $(".payment").click(function () {
-    $(".paymentDropdown").fadeIn();
-  });
-
-  var system = $(".paymentDropdown div");
-
-  $.each(system, function (index, value) {
-    $(value).click(function () {
-      var innerHtml = $(value).html();
-      $(".payment").html(innerHtml).css({ justifyContent: "flex-start" });
-      $(".paymentDropdown").fadeOut();
     });
   });
 });
