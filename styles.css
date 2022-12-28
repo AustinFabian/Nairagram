@@ -16,7 +16,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display:none;
 }
 
 .container {
@@ -265,9 +265,10 @@ form .country div:hover .fa {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 21px;
+  padding: 0 30px;
   margin-bottom: 5px;
   cursor: pointer;
+  gap: 20px;
 }
 
 .payment .fa {

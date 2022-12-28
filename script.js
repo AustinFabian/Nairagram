@@ -75,8 +75,34 @@ $(document).ready(function () {
     $(".dropdown").fadeToggle();
   });
 
+  var country = $(".countries div");
+  $.each(country, function (index, value) {
+    $(value).click(function () {
+      var img = $(value).children("img").attr("src");
+      var countryName = $(value).text();
+      var currency = $(value).attr("currency");
+
+      $(".countryFlag").attr("src", img);
+      $(".countrySpan").text(countryName);
+
+      $(".currencyChange").text(currency);
+
+      $(".dropdown").fadeOut();
+    });
+  });
+
   // Payment System
   $(".payment").click(function () {
     $(".paymentDropdown").fadeIn();
+  });
+
+  var system = $(".paymentDropdown div");
+
+  $.each(system, function (index, value) {
+    $(value).click(function () {
+      var innerHtml = $(value).html();
+      $(".payment").html(innerHtml).css("justify-content", "flex-start");
+      $(".paymentDropdown").fadeOut();
+    });
   });
 });
