@@ -93,7 +93,7 @@ nav div a:hover {
   height: 827px;
   padding: 75px 112px;
   justify-content: space-between;
-  background-image: url(./images&svg/Above\ the\ fold.svg);
+  background-image: url(./images/Above\ the\ fold.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -412,7 +412,7 @@ div.sendRec > div p{
 
 .body3 {
   background: #e5f8eb;
-  /* background-image: url(./images&svg/360_F_286239861_5aUxLf1u9Xf8gRQFVKbMqtZmWykv39Yz-4ef213bcb0ca16ebb307cfdd6b45b4c9-7b08f9.jpg.jpg); */
+  /* background-image: url(./images/360_F_286239861_5aUxLf1u9Xf8gRQFVKbMqtZmWykv39Yz-4ef213bcb0ca16ebb307cfdd6b45b4c9-7b08f9.jpg.jpg); */
 }
 
 .body3 .flex > * {
@@ -751,9 +751,9 @@ footer {
 
 /* how it works page styling starts here */
 
-.howItWorks > div:nth-child(2),
-.howItWorks > div:nth-child(3),
-.howItWorks > div:nth-child(4) {
+.howitworks > div:nth-child(2),
+.howitworks > div:nth-child(3),
+.howitworks > div:nth-child(4) {
   padding: 0 112px;
   display: flex;
   justify-content: center;
@@ -762,21 +762,21 @@ footer {
   gap: 170px;
 }
 
-.howItWorks .lato48px {
+.howitworks .lato48px {
   font-weight: 700;
 }
 
-.howItWorks .flex {
+.howitworks .flex {
   gap: 0;
   align-items: center;
 }
 
-.howItWorks .flex > * {
+.howitworks .flex > * {
   width: 50%;
   min-height: 300px;
 }
 
-.howItWorks .flex > div img {
+.howitworks .flex > div img {
   width: 550px;
   height: 300px;
 }
@@ -811,20 +811,20 @@ footer {
   width: 416px;
 }
 
-.howItWorks > div:nth-child(3) {
+.howitworks > div:nth-child(3) {
   background: #e9f9ee;
 }
 
-/* aboutUs */
+/* aboutus */
 
-.aboutUs .flex {
+.aboutus .flex {
   display: flex;
   justify-content: space-between;
   padding: 0 90px 200px 112px;
   flex-wrap: nowrap;
 }
 
-.aboutUs .flex .div-h-288 {
+.aboutus .flex .div-h-288 {
   width: 588px;
   display: flex;
   align-items: center;
@@ -833,20 +833,20 @@ footer {
   gap: 30px;
 }
 
-.aboutUs > p {
+.aboutus > p {
   font-size: 32px;
   color: #272a2b;
   font-weight: 700;
   padding-top: 30px;
 }
 
-.aboutUs .flex .div-h-288 p {
+.aboutus .flex .div-h-288 p {
   text-align: justify;
 }
 
-.aboutUs .flex .asoImg {
+.aboutus .flex .asoImg {
   width: 515px;
-  background-image: url(./images&svg/zumaRock.png);
+  background-image: url(./images/zumaRock.png);
   background-position: center;
   height: 444px;
   border-radius: 20px;
@@ -917,9 +917,9 @@ footer {
   transition: 0.5s all ease;
 }
 
-/* loginForm styling */
+/* loginform styling */
 
-.loginForm {
+.loginform {
   min-height: 100vh;
   background: #f1f3f4;
   display: flex;
@@ -928,7 +928,7 @@ footer {
   flex-direction: column;
 }
 
-.loginForm form {
+.loginform form {
   min-height: 436px;
   width: 450px;
   padding: 0 20px;
@@ -940,21 +940,21 @@ footer {
   flex-direction: column;
 }
 
-.loginForm form .p1 {
+.loginform form .p1 {
   margin: 50px 0;
   font-size: 24px;
   color: #5e6366;
   font-weight: 700;
 }
 
-.loginForm form > div {
+.loginform form > div {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.loginForm form input {
+.loginform form input {
   width: 100%;
   padding: 10px;
   border: 1px solid #5a9272;
@@ -969,11 +969,11 @@ footer {
   font-size: 14px;
 }
 
-.loginForm2::placeholder {
+.loginform2::placeholder {
   color: red;
 }
 
-.loginForm form .p00 {
+.loginform form .p00 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -982,14 +982,14 @@ footer {
   font-family: "Roboto", sans-serif;
 }
 
-.loginForm form .p00 .p000 {
+.loginform form .p00 .p000 {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
 }
 
-.loginForm form .p00 .p000 input {
+.loginform form .p00 .p000 input {
   width: 18px;
   height: 18px;
   margin-right: 5px;
@@ -998,7 +998,7 @@ footer {
   cursor: pointer;
 }
 
-.loginForm form button {
+.loginform form button {
   width: 100%;
   height: 45px;
   border: none;
@@ -1013,18 +1013,18 @@ footer {
   cursor: pointer;
 }
 
-.loginForm form button:hover {
+.loginform form button:hover {
   background-color: #026224;
 }
 
-.loginForm form p:last-child {
+.loginform form p:last-child {
   text-align: center;
   font-size: 14px;
   color: #272a2b;
   font-family: "Roboto", sans-serif;
 }
 
-.loginForm form p:last-child a {
+.loginform form p:last-child a {
   font-weight: 700;
   color: #272a2b;
 }
@@ -1103,16 +1103,16 @@ form .myform-control.error span.error {
 
 /* Open account page */
 
-.createAccount .flex {
+.createaccount .flex {
   gap: 0;
   padding: 0;
 }
 
-.createAccount .flex > div {
+.createaccount .flex > div {
   height: 983px;
 }
 
-.createAccount .flex > div:first-child {
+.createaccount .flex > div:first-child {
   width: 44%;
   background: black;
   background: #9ad1ad;
@@ -1123,47 +1123,47 @@ form .myform-control.error span.error {
   gap: 200px;
 }
 
-.createAccount .flex > div:last-child {
+.createaccount .flex > div:last-child {
   width: 56%;
   background: black;
 }
 
-.createAccount .flex > div:first-child > div:last-child {
+.createaccount .flex > div:first-child > div:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 54px;
 }
 
-.createAccount .flex > div:first-child > div:first-child > .lato32px {
+.createaccount .flex > div:first-child > div:first-child > .lato32px {
   padding: 72px 86px 30px 72px;
 }
 
-.createAccount .flex > div:first-child > div:first-child > p:nth-child(2) {
+.createaccount .flex > div:first-child > div:first-child > p:nth-child(2) {
   font-size: 16px;
   color: #272a2b;
   text-align: center;
 }
 
-.createAccount .flex > div:first-child > div:last-child img:nth-child(2) {
+.createaccount .flex > div:first-child > div:last-child img:nth-child(2) {
   width: 100%;
 }
 
-.createAccount .loginForm {
+.createaccount .loginform {
   background: white;
   justify-content: flex-start;
   height: 100%;
 }
 
-.createAccount .loginForm form {
+.createaccount .loginform form {
   box-shadow: none;
 }
 
-.createAccount .loginForm form div {
+.createaccount .loginform form div {
   gap: 20px;
 }
 
-.createAccount .loginForm form .check {
+.createaccount .loginform form .check {
   display: flex;
   align-items: center;
   text-align: start;
@@ -1171,13 +1171,13 @@ form .myform-control.error span.error {
   font-size: 14px;
 }
 
-.createAccount .loginForm form .check span a {
+.createaccount .loginform form .check span a {
   text-decoration: underline;
   color: #038c33;
   font-weight: 700;
 }
 
-.createAccount .loginForm form .check span input[type="checkbox"] {
+.createaccount .loginform form .check span input[type="checkbox"] {
   width: 18px;
   height: 18px;
   border: none;

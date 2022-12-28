@@ -1,10 +1,10 @@
 $(document).ready(function () {
   $(".faq .main1 ul li p").click(function () {
     if ($(this).find(".fa").css("transform") == "none") {
-      $(this).find(".fa").css("transform", "rotate(45deg)");
+      $(this).find(".fa").css({ transform: "rotate(45deg)" });
     } else {
-      $(this).find(".fa").css("transform", "rotate(0deg)");
-      $(this).find(".fa").css("transform", "none");
+      $(this).find(".fa").css({ transform: "rotate(0deg)" });
+      $(this).find(".fa").css({ transform: "none" });
     }
     $(this).siblings("div").slideToggle();
   });
@@ -14,14 +14,14 @@ $(document).ready(function () {
     .click(function () {
       const input = $(this);
       input.parent().addClass("activeInput");
-      input.css("border-color", "#038c33");
-      $(this).siblings("i").css("margin-top", "20px");
-      $(this).attr("placeholder", "");
+      input.css({ borderColor: "#038c33" });
+      input.siblings("i").css({ marginTop: "20px" });
+      input.attr("placeholder", "");
     })
     .blur(function () {
       const input = $(this);
       if (!input.val()) {
-        $(this).siblings("i").css("margin-top", "0");
+        $(this).siblings("i").css({ marginTop: "0" });
         input.css("border-color", "");
         input.parent().removeClass("activeInput");
       }
@@ -47,40 +47,35 @@ $(document).ready(function () {
     }
   });
 
-  $(".send_Email").click(function () {
-    $(".writeMail").css("display", "none");
-    $(".emailSent").css("display", "flex");
-  });
-
   // form submits
-  $("#loginForm").submit(function (e) {
+  $("#loginform").submit(function (e) {
     e.preventDefault();
-    $(this).css("height", "500px");
-    $(".fa").css("margin", "0");
+    $(this).css({ height: "500px" });
+    $(".fa").css({ margin: 0 });
     $(this)
       .find(".myform-control")
       .removeClass("activeInput")
       .addClass("error");
-    $(this).find(".error-message").css("display", "flex");
+    $(this).find(".error-message").css({ display: "flex" });
   });
 
   // referral and toogle
   $(".slider").click(function () {
-    $(".referral").fadeToggle();
+    $(this).parent().parent().siblings("div").find(".referral").fadeToggle();
     $(this).toggleClass("slide");
   });
 
   // country
   $(".click").click(function () {
-    $(".dropdown").fadeToggle();
+    $(this).parent().siblings(".dropdown").fadeToggle();
   });
 
   var country = $(".countries div");
   $.each(country, function (index, value) {
     $(value).click(function () {
-      var img = $(value).children("img").attr("src");
-      var countryName = $(value).text();
-      var currency = $(value).attr("currency");
+      var img = $(this).children("img").attr("src");
+      var countryName = $(this).text();
+      var currency = $(this).attr("currency");
 
       $(".countryFlag").attr("src", img);
       $(".countrySpan").text(countryName);
@@ -101,7 +96,7 @@ $(document).ready(function () {
   $.each(system, function (index, value) {
     $(value).click(function () {
       var innerHtml = $(value).html();
-      $(".payment").html(innerHtml).css("justify-content", "flex-start");
+      $(".payment").html(innerHtml).css({ justifyContent: "flex-start" });
       $(".paymentDropdown").fadeOut();
     });
   });
