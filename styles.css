@@ -50,6 +50,10 @@ nav ul li a {
   color: #919699;
 }
 
+nav ul li a:hover{
+  color: #038c33;
+}
+
 .active {
   border-bottom: 2px solid;
   border-color: #038c33;
@@ -79,6 +83,7 @@ nav div a:hover {
   text-align: center;
   background-color: #038c33;
   padding: 15px 20px;
+  transition: .4s all ease;
 }
 
 .btn-bg-green:hover {
