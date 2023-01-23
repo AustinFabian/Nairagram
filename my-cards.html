@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container header2 my-profile my-cards">
+      <!-- nav -->
+      <nav>
+        <img src="./images/Logo (1).svg" alt="" />
+
+        <ul>
+          <li><a href="./send-money-from-home.html">Send money</a></li>
+          <li><a href="./transfer-history.html">Transfer history</a></li>
+          <li><a href="./refer-a-friend.html">Refer a friend</a></li>
+        </ul>
+
+        <div class="my-account">
+          <div>
+            <div class="click">
+              My Account <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <ul>
+              <li><a href="my-profile.html">My profile</a></li>
+              <li><a href="my-cards.html">My cards</a></li>
+              <li><a href="my-recipients.html">My Recipients</a></li>
+              <li><a href="settings.html">Settings</a></li>
+              <li><a href="">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main1 -->
+      <div class="body1">
+        <p class="lato32px">My cards</p>
+
+        <div class="cards-div">
+          <div class="cards">
+            <img src="./images/visa.png" alt="" />
+            <p class="card-number">**** **** **** 1119</p>
+
+            <div>
+              <div>
+                <p class="holder-name">Card holder name</p>
+                <p class="name">gbolahaun obanikoro</p>
+              </div>
+              <div>
+                <p class="holder-name">Expiry date</p>
+                <p class="name">02/25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards not-in-use">
+            <img src="./images/visa.png" alt="" />
+            <p class="card-number">**** **** **** 1119</p>
+
+            <div>
+              <div>
+                <p class="holder-name">Card holder name</p>
+                <p class="name">gbolahaun obanikoro</p>
+              </div>
+              <div>
+                <p class="holder-name">Expiry date</p>
+                <p class="name">02/25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards not-in-use">
+            <img src="./images/visa.png" alt="" />
+            <p class="card-number">**** **** **** 1119</p>
+
+            <div>
+              <div>
+                <p class="holder-name">Card holder name</p>
+                <p class="name">gbolahaun obanikoro</p>
+              </div>
+              <div>
+                <p class="holder-name">Expiry date</p>
+                <p class="name">02/25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards not-in-use">
+            <section>
+              <img src="./images/mastercard.png" alt="" />
+              <p class="card-number">**** **** **** 9034</p>
+            </section>
+            <div>
+              <div>
+                <p class="holder-name">Card holder name</p>
+                <p class="name">gbolahaun obanikoro</p>
+              </div>
+              <div>
+                <p class="holder-name">Expiry date</p>
+                <p class="name">02/25</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="add-card"
+            data-bs-toggle="modal"
+            data-bs-target="#add-card"
+          >
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <p>Add card</p>
+          </div>
+        </div>
+
+        <!-- add card modal -->
+        <div
+          class="modal"
+          tabindex="-1"
+          id="add-card"
+          data-bs-backdrop="static"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add card</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <p>Card information</p>
+                  <ul class="field-list">
+                    <li>
+                      <div>
+                        <fieldset class="">
+                          <legend>Card holder name</legend>
+                          <input
+                            type="text"
+                            placeholder="Card holder name"
+                            name="holder-name"
+                          />
+                        </fieldset>
+                        <span>please enter card holder name</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <fieldset class="">
+                          <legend>Card number</legend>
+                          <input
+                            type="text"
+                            placeholder="Card number"
+                            name="card-number"
+                          />
+                        </fieldset>
+                        <span>please enter a valid card number</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <fieldset class="fieldset-short">
+                          <legend>Expiry date</legend>
+                          <input
+                            type="month"
+                            value=""
+                            placeholder="Expiry date"
+                            name="expiry-date"
+                          />
+                        </fieldset>
+                        <span>please enter an expiry date</span>
+                      </div>
+                      <div>
+                        <fieldset class="fieldset-short">
+                          <legend>CVV</legend>
+                          <input
+                            type="number"
+                            value=""
+                            placeholder="CVV"
+                            name="cvv"
+                          />
+                        </fieldset>
+                        <span>please enter a CVV</span>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <span class="check">
+                    <span><input type="checkbox" name="" id="" /></span
+                    ><span> I accept <a href="">Terms and conditions</a></span>
+                  </span>
+
+                  <button class="button-large">Continue</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- delete card modal -->
+        <div
+          class="modal"
+          tabindex="-1"
+          id="delete-card"
+          data-bs-backdrop="static"
+        >
+          <div class="modal-dialog modal-dialog-centered for-del">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete this card?</p>
+
+                <div class="buttons">
+                  <button
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    No,keep
+                  </button>
+
+                  <button data-bs-dismiss="modal">Yes,delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="delete-button"
+          data-bs-toggle="modal"
+          data-bs-target="#delete-card"
+        >
+          Delete card
+        </button>
+      </div>
+    </div>
+    <scripts>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./script.js"></script>
+    </scripts>
+  </body>
+</html>

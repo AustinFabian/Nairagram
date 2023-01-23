@@ -7,6 +7,18 @@
   text-decoration: none;
 }
 
+:root {
+  --primary-color: #038c33;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -16,7 +28,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display:none;
+  display: none;
 }
 
 .container {
@@ -25,6 +37,53 @@ html {
 
 .container > * {
   padding: 0 112px;
+}
+
+::placeholder {
+  color: #9ca1a3;
+}
+
+fieldset {
+  border: 1px solid #e3e5e5;
+  border-radius: 8px;
+  padding: 13px 15px;
+  vertical-align: top;
+  min-width: 157px;
+  position: relative;
+}
+
+/* .field-list li div{
+  display: flex;
+  flex-direction: column;
+} */
+
+input,
+select {
+  outline: none;
+}
+
+fieldset legend {
+  font-size: 12px;
+  padding: 0 5px;
+  color: var(--primary-color);
+  float: none;
+  margin: 0;
+  width: fit-content;
+}
+
+fieldset.fieldset-short {
+  width: 157px;
+}
+
+fieldset input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* header nav section */
@@ -36,6 +95,12 @@ nav {
   justify-content: space-between;
   font-size: 18px;
   font-weight: 700;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 999;
 }
 
 nav ul {
@@ -50,7 +115,7 @@ nav ul li a {
   color: #919699;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   color: #038c33;
 }
 
@@ -83,7 +148,46 @@ nav div a:hover {
   text-align: center;
   background-color: #038c33;
   padding: 15px 20px;
-  transition: .4s all ease;
+  transition: 0.4s all ease;
+  outline: none;
+  border: none;
+}
+
+.btn-small {
+  width: 176px;
+  height: 45px;
+  border: 1px solid #038c33;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all ease;
+}
+
+.btn-small:hover {
+  font-weight: 700;
+}
+
+.bg-green {
+  background-color: #038c33;
+  color: white;
+}
+
+.bg-green:hover {
+  background-color: white;
+  color: #038c33;
+}
+
+.bg-none {
+  background: transparent;
+  color: #038c33;
+}
+
+.bg-none:hover {
+  background: #038c33;
+  color: #fff;
 }
 
 .btn-bg-green:hover {
@@ -101,6 +205,7 @@ nav div a:hover {
   background-image: url(./images/Above\ the\ fold.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 128px;
 }
 
 .body1 > div:nth-child(1) {
@@ -124,13 +229,13 @@ nav div a:hover {
   font-size: 20px;
 }
 
-.qrCodeImg {
+.qr-code-img {
   display: flex;
   gap: 30px;
   margin-top: 60px;
 }
 
-.qrCodeImg > img {
+.qr-code-img > img {
   width: 120px;
   height: 120px;
 }
@@ -146,25 +251,46 @@ nav div a:hover {
   width: 169px;
 }
 
-.body1 form {
-  height: 685px;
-  width: 453px;
+.body1 > form, .body1 form {
+  min-height: 400px;
+  width: 410px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(94, 99, 102, 0.25);
-  padding: 50px 40px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  color: black;
 }
 
-form .country > div:nth-child(1) {
-  /* flex-grow: 1; */
+.body1 > form, .body1 form .for-spread > *{
+  margin: 20px 0;
+}
+
+.choose {
   display: flex;
-  gap: 75px;
+  align-items: flex-end;
+  min-height: 50px;
 }
 
-form > .country{
+.choose > fieldset{
+  flex-grow: 1;
+  border-radius: 5px 0 0 5px;
+  height: 65px;
+}
+
+.choose > fieldset legend{
+  font-size: 16px;
+}
+
+.choose > fieldset > input{
+  font-size: 24px;
+  color: #026224;
+  font-weight: 700;
+}
+
+form > .country {
   width: 100%;
   position: relative;
 }
@@ -174,8 +300,12 @@ form .country > div .click {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px 0 48px;
   cursor: pointer;
+  border: 1px solid #9ad1ad;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  height: 55px;
+  gap: 5px;
 }
 
 form .country > span {
@@ -189,7 +319,6 @@ form .country div .click span {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 5px;
 }
 
 form .country div .fa {
@@ -214,7 +343,7 @@ form .country div:hover .fa {
   border: 1px solid #f8f9f9;
   display: none;
   background: #fff;
-  z-index: 999;
+  z-index: 888;
 }
 
 .dropdown > * {
@@ -237,7 +366,8 @@ form .country div:hover .fa {
   outline: none;
 }
 
-.dropdown .search input::placeholder {
+.dropdown .search input::placeholder,
+.field-list input::placeholder {
   color: #c8cccf;
 }
 
@@ -266,7 +396,7 @@ form .country div:hover .fa {
 
 /*  */
 
-.body1 form .select{
+.body1 form .select {
   width: 100%;
   position: relative;
 }
@@ -291,7 +421,7 @@ form .country div:hover .fa {
 }
 
 .payment-dropdown {
-  width: 100%;;
+  width: 100%;
   min-height: 200px;
   position: absolute;
   border-bottom-right-radius: 10px;
@@ -330,45 +460,55 @@ form .country div:hover .fa {
   border-radius: 0 0 10px 10px;
 }
 
-.payment span{
+.payment span {
   display: flex;
   gap: 20px;
 }
 
 /*  */
-div.sendrec{
+div.sendrec {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-div.sendrec span{
+div.sendrec span {
   font-size: 14px;
   color: #272a2b;
 }
 
-.little{
+.little {
   font-size: 14px;
   color: #272a2b;
 }
 
-p.spread{
+p.spread {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-div.space{
+p.spread img{
+  width: 15px;
+  margin: 0 10px;
+}
+
+p.spread span:nth-child(1) span{
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+div.space {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-div.sendrec > div{
+div.sendrec > div {
   display: flex;
 }
 
-div.sendrec > div input{
+div.sendrec > div input {
   flex-grow: 1;
   border: 1px solid;
   border-color: #e3e5e5;
@@ -382,7 +522,7 @@ div.sendrec > div input{
   outline: none;
 }
 
-div.sendrec > div p{
+div.sendrec > div p {
   height: 52px;
   padding: 20px 30px;
   border-top-right-radius: 5px;
@@ -397,15 +537,17 @@ div.sendrec > div p{
 
 /* button */
 
-.body1 form button{
+.body1 form button,
+.button-large {
   width: 100%;
   height: 60px;
   border-radius: 5px;
-  background-color: #038c33;
+  background-color: var(--primary-color);
   font-size: 18px;
   color: #ffffff;
   outline: none;
   border: none;
+  transition: 0.2s all ease;
 }
 
 /* div body2 and body3 section styling */
@@ -455,6 +597,24 @@ div.sendrec > div p{
   font-weight: 900;
   color: #272a2b;
   text-align: center;
+}
+
+.lato24px {
+  font-size: 24px;
+  font-weight: 900;
+  color: #272a2b;
+}
+
+.lato20px {
+  font-size: 20px;
+  font-weight: 900;
+  color: #272a2b;
+}
+
+.lato16px {
+  font-size: 16px;
+  font-weight: 700;
+  color: #272a2b;
 }
 
 .flex {
@@ -652,7 +812,7 @@ div.sendrec > div p{
 
 /* before footer */
 
-.beforeFooter {
+.before-footer {
   height: 580px;
   display: flex;
   justify-content: space-between;
@@ -661,22 +821,22 @@ div.sendrec > div p{
   color: white;
 }
 
-.beforeFooter > div:nth-child(1) {
+.before-footer > div:nth-child(1) {
   min-height: 20px;
   display: flex;
   justify-content: center;
   gap: 112px;
 }
 
-.beforeFooter > div > * {
+.before-footer > div > * {
   vertical-align: top;
 }
 
-.beforeFooter div ul {
+.before-footer div ul {
   list-style-type: none;
 }
 
-.beforeFooter div ul li {
+.before-footer div ul li {
   margin: 15px 0;
   font-size: 16px;
   display: flex;
@@ -684,37 +844,37 @@ div.sendrec > div p{
   gap: -10px;
 }
 
-.beforeFooter div ul li a {
+.before-footer div ul li a {
   color: #fff;
   transition: 0.5s all ease;
 }
 
-.beforeFooter div ul li a:hover {
+.before-footer div ul li a:hover {
   color: #f1c403;
 }
 
-.beforeFooter div ul li:nth-child(1) {
+.before-footer div ul li:nth-child(1) {
   font-size: 20px;
   margin: 0;
   font-weight: 700;
 }
 
-.beforeFooter div ul li p:nth-child(1) {
+.before-footer div ul li p:nth-child(1) {
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.beforeFooter > div .store {
+.before-footer > div .store {
   justify-content: flex-start;
 }
 
-.beforeFooter > div ul div {
+.before-footer > div ul div {
   display: flex;
   gap: 25px;
   margin-top: 30px;
 }
 
-.beforeFooter > div ul div > * {
+.before-footer > div ul div > * {
   height: 40px;
   width: 40px;
   border-radius: 100%;
@@ -727,7 +887,7 @@ div.sendrec > div p{
   transition: 0.5s all ease;
 }
 
-.beforeFooter > div ul div > *:hover {
+.before-footer > div ul div > *:hover {
   transform: rotate(180deg);
   background: #0448bf;
   color: #fff;
@@ -743,7 +903,7 @@ footer {
   font-weight: 700;
 }
 
-.scrollUp {
+.scroll-up {
   width: 79px;
   height: 75px;
   padding: 13px;
@@ -771,9 +931,9 @@ footer {
 
 /* how it works page styling starts here */
 
-.howitworks > div:nth-child(2),
-.howitworks > div:nth-child(3),
-.howitworks > div:nth-child(4) {
+.how-it-works > div:nth-child(2),
+.how-it-works > div:nth-child(3),
+.how-it-works > div:nth-child(4) {
   padding: 0 112px;
   display: flex;
   justify-content: center;
@@ -782,21 +942,21 @@ footer {
   gap: 170px;
 }
 
-.howitworks .lato48px {
+.how-it-works .lato48px {
   font-weight: 700;
 }
 
-.howitworks .flex {
+.how-it-works .flex {
   gap: 0;
   align-items: center;
 }
 
-.howitworks .flex > * {
+.how-it-works .flex > * {
   width: 50%;
   min-height: 300px;
 }
 
-.howitworks .flex > div img {
+.how-it-works .flex > div img {
   width: 550px;
   height: 300px;
 }
@@ -831,20 +991,20 @@ footer {
   width: 416px;
 }
 
-.howitworks > div:nth-child(3) {
+.how-it-works > div:nth-child(3) {
   background: #e9f9ee;
 }
 
-/* aboutus */
+/* about-us */
 
-.aboutus .flex {
+.about-us .flex {
   display: flex;
   justify-content: space-between;
   padding: 0 90px 200px 112px;
   flex-wrap: nowrap;
 }
 
-.aboutus .flex .div-h-288 {
+.about-us .flex .div-h-288 {
   width: 588px;
   display: flex;
   align-items: center;
@@ -853,18 +1013,18 @@ footer {
   gap: 30px;
 }
 
-.aboutus > p {
+.about-us > p {
   font-size: 32px;
   color: #272a2b;
   font-weight: 700;
   padding-top: 30px;
 }
 
-.aboutus .flex .div-h-288 p {
+.about-us .flex .div-h-288 p {
   text-align: justify;
 }
 
-.aboutus .flex .asoImg {
+.about-us .flex .asoImg {
   width: 515px;
   background-image: url(./images/zumaRock.png);
   background-position: center;
@@ -941,12 +1101,16 @@ footer {
 
 .loginform {
   min-height: 100vh;
-  background: #f1f3f4;
+  background: #9ad1ad;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
+/* .about-us .login-form{
+
+} */
 
 .loginform form {
   min-height: 436px;
@@ -1124,6 +1288,7 @@ form .myform-control.error span.error {
 /* Open account page */
 
 .createaccount .flex {
+  margin-top: 128px;
   gap: 0;
   padding: 0;
 }
@@ -1183,7 +1348,8 @@ form .myform-control.error span.error {
   gap: 20px;
 }
 
-.createaccount .loginform form .check {
+.check {
+  height: 40px;
   display: flex;
   align-items: center;
   text-align: start;
@@ -1191,13 +1357,17 @@ form .myform-control.error span.error {
   font-size: 14px;
 }
 
-.createaccount .loginform form .check span a {
-  text-decoration: underline;
+.check span:nth-child(2) {
+  margin-bottom: 5px;
+}
+
+.check span a {
+  text-decoration: none;
   color: #038c33;
   font-weight: 700;
 }
 
-.createaccount .loginform form .check span input[type="checkbox"] {
+.check span input[type="checkbox"] {
   width: 18px;
   height: 18px;
   border: none;
@@ -1275,4 +1445,960 @@ input:checked + .slider:before {
 
 input:checked + .slide {
   background-color: #e9f9ee;
+}
+
+/* send-money-from-home styling starts here */
+
+.header2 nav {
+  border: 1px solid #f6f8f9;
+  min-height: 128px;
+  z-index: 1200;
+}
+
+.header2 .my-account {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.header2 nav .click {
+  color: #919699;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.header2 nav .click:hover {
+  color: #038c33;
+}
+
+.header2 nav .click .fa {
+  transition: 0.2s all ease;
+}
+
+.header2 nav .dropdown {
+  margin-top: 90px;
+  min-height: 100px;
+  width: 220px;
+  box-shadow: 0px 4px 8px rgba(145, 150, 153, 0.25);
+}
+
+.header2 nav .dropdown ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  padding: 10px;
+}
+
+.header2 nav .dropdown ul > * {
+  display: flex;
+  width: 100%;
+}
+
+.header2 nav .dropdown ul > * a {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: end;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #272a2b;
+  transition: 0.2s all ease;
+}
+
+.header2 nav .dropdown ul > * a:hover {
+  background-color: #f1f3f4;
+  color: #038c33;
+}
+
+.header2 nav .dropdown ul > :last-child a {
+  background-color: #fff5f5;
+  color: #e53935;
+}
+
+.header2 nav .dropdown ul > :last-child a:hover {
+  background: #ffcfcf;
+}
+
+.header2 nav ul {
+  margin-right: 200px;
+}
+
+.header2 .body1 {
+  display: block;
+  background: white;
+}
+
+/* my-profile page styling starts here */
+
+.my-profile .body1 {
+  padding-top: 30px;
+}
+
+.my-profile .body1 .flex {
+  justify-content: space-between;
+}
+
+.my-profile .body1 .flex div:nth-child(1),
+.width-30-percent {
+  padding: 20px 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.my-profile .body1 .flex div:nth-child(1) ul,
+ul.field-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.my-profile .body1 .flex div:nth-child(1) ul li,
+ul.field-list li {
+  display: flex;
+  gap: 20px;
+}
+
+.my-profile .body1 .flex div:nth-child(1) ul li > *,
+ul.field-list li > * {
+  flex-grow: 1;
+}
+
+.my-profile .body1 .lato32px {
+  text-align: start;
+}
+
+.my-profile .body1 .flex div:nth-child(2) {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .complete-registration {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(197, 201, 204, 0.24);
+  border: 2px solid #7bc495;
+  padding: 25px 20px;
+  transition: 0.2s all ease;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .complete-registration:hover {
+  background: #f2fcf6;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .basic-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(197, 201, 204, 0.24);
+  border: 2px solid #dde1e3;
+  padding: 35px;
+  background: #f6f8f9;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .basic-info p {
+  display: flex;
+  justify-content: space-between;
+  color: #272a2b;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .basic-info p span:nth-child(1) {
+  font-size: 18px;
+}
+
+.my-profile .body1 .flex div:nth-child(2) .basic-info p span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.line {
+  height: 10px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+  border-radius: 8px;
+}
+
+.line:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #e53935;
+  border-radius: 8px;
+}
+
+.line1:before {
+  width: 25%;
+}
+
+/* account-verification styling starts here */
+
+.acc-v-process > div:nth-child(1) {
+  height: 78px;
+  background: #f6f8f9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.acc-v-process > div:nth-child(2),
+.for-line-div {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acc-v-process > div:nth-child(2) .line-div,
+.for-line-div .line-div {
+  width: 55%;
+}
+
+.acc-v-process > div:nth-child(2) .under,
+.for-line-div .under {
+  width: 62%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.acc-v-process > div:nth-child(2) .under p:nth-child(2),
+.acc-v-process > div:nth-child(2) .under p:nth-child(3) {
+  margin-right: 45px;
+}
+
+.acc-v-process > div:nth-child(2) .line-div .line,
+.for-line-div .line-div .line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7px;
+  background-color: #e9f9ee;
+}
+
+.acc-v-process > div:nth-child(2) .line-div .line > *,
+.for-line-div .line-div .line > * {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.acc-v-process > div:nth-child(2) .line-div .line1:before,
+.for-line-div .line-div .line1:before {
+  width: 0;
+}
+
+.acc-v-process > div:nth-child(1) .fa {
+  font-size: 30px;
+  color: #919699;
+  cursor: pointer;
+}
+
+.acc-v-process .active-process {
+  font-weight: 700;
+}
+
+.acc-v-process .width-30-percent {
+  width: 25%;
+  padding-top: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.acc-v-process .width-30-percent .lato24px {
+  text-align: center;
+}
+
+.acc-v-process fieldset legend {
+  display: none;
+}
+
+.acc-v-process .width-30-percent > p.no-style {
+  text-align: center;
+  color: #5e6366;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0;
+}
+
+.acc-v-process .width-30-percent .button-large:hover {
+  background: #026224;
+}
+
+ul li select {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #272a2b;
+  border: 1px solid #e3e5e5;
+}
+
+ul.field-list li div span {
+  font-size: 12px;
+  color: #e53935;
+  padding-left: 15px;
+  display: none;
+}
+
+.acc-v-process ::-webkit-input-placeholder {
+  color: #d6d9db;
+}
+
+/* Identity verification page styling starts here */
+
+.verification > div:nth-child(2) .line-div .line1:before {
+  width: 50%;
+  background: var(--primary-color);
+}
+
+.verification > div:nth-child(2) .line-div .line div:nth-child(1),
+.selfie > div:nth-child(2) .line-div .line div:nth-child(2),
+.complete > div:nth-child(2) .line-div .line div:nth-child(2) {
+  background: var(--primary-color);
+  color: white;
+}
+
+.verification ul p {
+  font-weight: 900;
+}
+
+.verification ul p:nth-child(1),
+.verification ul p:nth-child(3) {
+  font-size: 14px;
+}
+
+.verification ul li div fieldset {
+  background: #f7f9fa;
+}
+
+.verification ul select {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* selfie page styling starts here */
+
+.selfie > div:nth-child(2) .line-div .line1:before,
+.complete > div:nth-child(2) .line-div .line1:before {
+  width: 100%;
+  background: var(--primary-color);
+}
+
+.selfie .take-selfie {
+  height: 335px;
+  background: #f1f3f4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selfie .take-selfie .fa,
+.selfie .take-selfie .lato24px {
+  color: #919699;
+}
+
+.selfie .take-selfie .fa {
+  font-size: 40px;
+}
+
+/* verificatioin complete page styling */
+
+.check-div {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #e9f9ee;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-div > div {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background: #dff3de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-div > div > div {
+  width: 87px;
+  height: 87px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-div > div > div .fa {
+  font-size: 65px;
+  color: #d2f0db;
+}
+
+/* my cards page styling starts here */
+
+.cards-div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cards-div > * {
+  cursor: pointer;
+}
+
+.cards {
+  height: 170px;
+  width: 300px;
+  background: url("./images/Card.svg");
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+
+.cards > * {
+  flex-grow: 1;
+}
+
+.not-in-use {
+  opacity: 0.4;
+  transition: 0.3s all ease;
+}
+
+.add-card {
+  height: 170px;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid #d5d5d5;
+  /* color: #fff; */
+}
+
+.add-card > * {
+  margin: 0;
+}
+
+.add-card .fa {
+  font-size: 30px;
+  font-weight: 100;
+  color: #d5d5d5;
+}
+
+.cards img {
+  width: 50px;
+}
+
+.cards section > p,
+.cards > p {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.cards > div {
+  display: flex;
+}
+
+.cards > div > * {
+  flex-grow: 1;
+}
+
+.cards > div > * > p {
+  margin: 0;
+}
+
+.cards > div > * > p.holder-name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cards > div > * > p.name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.my-cards .modal-content {
+  width: 400px;
+  border-radius: 10px;
+  min-height: 200px;
+  padding: 20px 20px 50px 20px;
+}
+
+.my-cards .modal-content .field-list li {
+  gap: 10px;
+}
+
+.my-cards .modal-content .field-list li div .fieldset-short {
+  width: 115px;
+}
+
+.my-cards .modal-dialog-centered {
+  justify-content: center;
+}
+
+.my-cards .modal-header .btn-close {
+  padding: 0;
+  margin: 0;
+}
+
+.my-cards .modal-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.my-cards .modal-header {
+  border: none;
+}
+
+.my-cards .modal-footer {
+  display: none;
+}
+
+.my-cards .body1 {
+  height: 1000px;
+}
+
+.my-cards .modal.show .modal-dialog {
+  height: 900px;
+}
+
+.my-cards .modal-content form p:nth-child(1) {
+  font-size: 14px;
+  color: #919699;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.delete-button {
+  width: 176px;
+  height: 45px;
+  border: 1px solid #e53935;
+  background-color: #fff5f5;
+  font-size: 16px;
+  color: #e53935;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.2s all ease;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+  color: #fff5f5;
+  font-weight: 700;
+}
+
+.my-cards .body1,
+.my-recipients .body1 {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  justify-content: flex-start;
+}
+
+.my-cards .for-del .modal-header {
+  padding: 0;
+}
+
+.my-cards .for-del .modal-body p {
+  text-align: center;
+  font-size: 14px;
+  color: #272a2b;
+}
+
+.my-cards .for-del .modal-content {
+  padding: 20px;
+}
+
+.my-cards .for-del .modal-header,
+.for-del h5 {
+  color: #e53935;
+  font-weight: 900;
+}
+
+.my-cards .for-del .modal-body .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.my-cards .for-del .modal-body .buttons > * {
+  height: 40px;
+  border: 1px solid #e53935;
+  background-color: #fff5f5;
+  font-size: 16px;
+  color: #e53935;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-cards .for-del .modal-body .buttons button:nth-child(2) {
+  background-color: #e53935;
+  color: #fff5f5;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+/* my recipients page styling starts here */
+
+.my-recipients .body1 div:nth-child(2) {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.my-recipients .body1 div:nth-child(2) p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my-recipients .body1 div:nth-child(2) p .little {
+  font-weight: 700;
+}
+
+.my-recipients .body1 .lato20px:nth-child(3) {
+  text-align: end;
+}
+
+.long-input {
+  width: 450px;
+  height: 45px;
+  border: 1px solid #c5c9cc;
+  padding: 0px 8px;
+  font-size: 16px;
+  color: #3e4345;
+  border-radius: 4px;
+}
+
+.my-recipients table {
+  border-collapse: collapse;
+}
+
+.my-recipients table thead tr th {
+  text-align: left;
+}
+
+.my-recipients table thead tr th,
+.my-recipients table tbody tr td {
+  padding: 20px;
+}
+
+.my-recipients table thead tr th {
+  border-bottom: 2px solid;
+  border-color: #c5c9cc;
+}
+
+.my-recipients table thead tr th:last-child {
+  text-align: center;
+}
+
+.my-recipients table tbody tr td:last-child {
+  text-align: center;
+  font-size: 25px;
+  color: #e53935;
+}
+
+/* settings page styliing starts here */
+.settings .body1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 50px;
+  padding-top: 70px;
+}
+
+.settings .body1 div:nth-child(2) {
+  border-bottom: 2px solid #e3e5e5;
+}
+
+.settings .body1 div:nth-child(2) p button {
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  background: transparent;
+  border-bottom: 2px solid #038c33;
+}
+
+.settings .body1 div:nth-child(3) form > div {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settings .body1 div:nth-child(3) form > div button {
+  height: 40px;
+  margin-top: 15px;
+  font-family: roboto;
+  font-size: 16px;
+}
+
+/* transactions page styling starts here */
+
+.transactions .body1 > div:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.transactions .body1 > div:nth-child(2) > * {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.transactions .body1 > div:nth-child(2) > * input,
+.transactions .body1 > div:nth-child(2) > * select {
+  height: 45px;
+  color: #3e4345;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #c5c9cc;
+  padding: 10px;
+  transition: 0.2s all ease;
+}
+
+.transactions .body1 > div:nth-child(2) > * select,
+.transactions .body1 > div:nth-child(2) > * input[type="date"] {
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.transactions .body1 > div:nth-child(2) > * span {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.transactions .body1 > div:nth-child(2) > * input[type="date"]:focus {
+  border-color: #038c33;
+}
+
+.transactions .all-transactions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 5px;
+}
+
+.transactions .all-transactions > * {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 50px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid #e3e5e5;
+  font-size: 14px;
+}
+
+.transactions .all-transactions > * > section {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.transactions .all-transactions > * > section > span {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background: #fff5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transactions .all-transactions > * > section > span img {
+  width: 15px;
+  height: 15px;
+}
+
+.transactions .all-transactions > * > section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.transactions .all-transactions > * > div > p:nth-child(1) {
+  color: var(--primary-color);
+  text-align: end;
+  margin-bottom: 5px;
+}
+
+.transactions .all-transactions > * > section > div > p:nth-child(1) {
+  font-weight: 700;
+}
+
+/* refer a friends page starts here */
+
+.refer .body1 .lato32px {
+  margin-top: 30px;
+}
+
+.refer .body1 .flex-friend {
+  display: flex;
+  justify-content: space-between;
+  min-height: 30px;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) ul {
+  list-style-type: decimal;
+  padding-left: 15px;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) .flex {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) .flex input {
+  width: 270px;
+  height: 45px;
+  padding: 0px 8px;
+  border: 1px solid #9ad1ad;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) .flex button {
+  font-weight: 700;
+  width: 195px;
+}
+
+.refer .body1 .flex-friend div:nth-child(1) .flex:nth-child(4) input,
+.refer .body1 .flex-friend div:nth-child(1) .flex:nth-child(5) input {
+  color: #038c33;
+  background-color: #e9f9ee;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) > img {
+  width: 213px;
+  height: 213px;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) > table {
+  border-collapse: collapse;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) > table tr td {
+  border: 1px solid #919699;
+  padding: 0 20px;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) > table tr td:nth-child(1) {
+  width: 215px;
+  height: 45px;
+  background-color: #f6f8f9;
+  font-weight: 700;
+}
+
+.refer .body1 .flex-friend div:nth-child(2) > table tr td:nth-child(2) {
+  width: 100px;
+  text-align: right;
+}
+
+/* send money page styling starts here */
+
+.send-money .for-line-div .line-div .line {
+  background: #c5c9cc;
+}
+
+.send-money .for-line-div .line-div .line1:before {
+  width: 60px;
+  height: 3px;
+  margin-top: 2px;
+  background: var(--primary-color);
+}
+
+.send-money .for-line-div .line-div .line > *{
+  color: #c5c9cc;
+  border: 4px solid #c5c9cc;
+}
+
+.send-money .for-line-div .line-div .line > div:nth-child(1){
+  border-color: var(--primary-color);
+}
+
+.send-money .for-line-div .under{
+  color: #c5c9cc;
+  padding: 0;
+}
+
+.send-money .for-line-div .under .active-process{
+  color: var(--primary-color);
+  font-size: 14px;
 }

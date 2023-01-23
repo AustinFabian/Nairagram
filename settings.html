@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container header2 my-profile settings">
+      <!-- nav -->
+      <nav>
+        <img src="./images/Logo (1).svg" alt="" />
+
+        <ul>
+          <li><a href="./send-money-from-home.html">Send money</a></li>
+          <li><a href="./transfer-history.html">Transfer history</a></li>
+          <li><a href="./refer-a-friend.html">Refer a friend</a></li>
+        </ul>
+
+        <div class="my-account">
+          <div>
+            <div class="click">
+              My Account <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <ul>
+              <li><a href="my-profile.html">My profile</a></li>
+              <li><a href="my-cards.html">My cards</a></li>
+              <li><a href="my-recipients.html">My Recipients</a></li>
+              <li><a href="settings.html">Settings</a></li>
+              <li><a href="">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main1 -->
+      <div class="body1">
+        <p class="lato32px">Settings</p>
+
+        <div>
+          <p>
+            <button>Change Password</button>
+          </p>
+        </div>
+
+        <div>
+          <form id="loginform" action="">
+            <div class="mb-3 d-flex flex-column myformgroup">
+              <div class="myform-control">
+                <i class="fa fa-eye toggle" aria-hidden="true"></i>
+                <label for="password" class="forPassword"
+                  >Current Password</label
+                >
+                <input
+                  required
+                  name="password"
+                  class="loginPassword"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+
+              <div class="myform-control">
+                <i class="fa fa-eye toggle" aria-hidden="true"></i>
+                <label for="confirmPassword" class="forPassword"
+                  >New Password</label
+                >
+                <input
+                  required
+                  name="confirmPassword"
+                  class="loginPassword"
+                  placeholder="New Password"
+                  type="password"
+                />
+              </div>
+
+              <div class="myform-control">
+                <i class="fa fa-eye toggle" aria-hidden="true"></i>
+                <label for="confirmPassword" class="forPassword"
+                  >Confirm Password</label
+                >
+                <input
+                  required
+                  name="confirmPassword"
+                  class="loginPassword"
+                  placeholder="Confirm Password"
+                  type="password"
+                />
+              </div>
+
+              <button type="submit" class="sign_in">Update Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
