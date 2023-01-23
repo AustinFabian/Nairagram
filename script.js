@@ -99,7 +99,7 @@ $(document).ready(function () {
           .find(".country-span img")
           .attr("src", flag);
 
-        $(".currency-change").text(currency);
+        $(this).parent().parent().siblings().find(".currency-change").text(currency);
       }
 
       $(".dropdown").fadeOut();
