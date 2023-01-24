@@ -102,7 +102,7 @@ $(document).ready(function () {
         $(this).parent().parent().siblings().find(".currency-change").text(currency);
       }
 
-      $(".dropdown").fadeOut();
+      $(this).parent().parent().fadeOut();
     });
   });
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
   // })
 
   //
-  $(".my-profile .click").click(function () {
+  $(".my-profile nav .click").click(function () {
     if ($(this).find(".fa").css("transform") == "none") {
       $(this).find(".fa").css({ transform: "rotate(90deg)" });
     } else {

@@ -15,34 +15,36 @@
   <body>
     <div class="container">
       <!-- nav -->
-      <nav class="header2 my-profile">
+      <div class="header2 my-profile">
+        <nav>
         <img src="./images/Logo (1).svg" alt="" />
 
         <ul>
-          <li><a href="./send-money.html">Send money</a></li>
-          <li><a href="./how-it-works.html">Transfer history</a></li>
-          <li><a href="./about-us.html">Refer a friend</a></li>
+          <li><a href="./send-money-from-home.html">Send money</a></li>
+          <li><a href="./transfer-history.html">Transfer history</a></li>
+          <li><a href="./refer-a-friend.html">Refer a friend</a></li>
         </ul>
 
         <div class="my-account">
-            <div>
-              <div class="click">
-                My Account <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </div>
-            </div>
-  
-            <div class="dropdown">
-              <ul>
-                <li><a href="my-profile.html">My profile</a></li>
-                <li><a href="my-wallet.html">My wallet</a></li>
-                <li><a href="my-cards.html">My cards</a></li>
-                <li><a href="my-recipients.html">My Recipients</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="">Log Out</a></li>
-              </ul>
+          <div>
+            <div class="click">
+              My Account <i class="fa fa-angle-right" aria-hidden="true"></i>
             </div>
           </div>
+
+          <div class="dropdown">
+            <ul>
+              <li><a href="my-profile.html">My profile</a></li>
+              <li><a href="my-wallet.html">My wallet</a></li>
+              <li><a href="my-cards.html">My cards</a></li>
+              <li><a href="my-recipients.html">My Recipients</a></li>
+              <li><a href="settings.html">Settings</a></li>
+              <li><a href="">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      </div>
 
       <!-- body1 -->
       <div class="body1">
@@ -59,44 +61,7 @@
           </div>
         </div>
         <form action="">
-          <div class="country">
-            <div>
-              <span>Send to</span>
-
-              <div class="click country">
-                <span class="country-span"
-                  ><img src="./images/nigeria.svg" alt="" />
-                  <span> Nigeria </span></span
-                >
-                <i class="fa fa-angle-down" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <div class="dropdown">
-              <div class="search">
-                <input type="text" placeholder="Search" />
-              </div>
-              <div class="countries options">
-                <div currency="XOF">
-                  <img src="./images/benin.svg" alt="" /> Benin
-                </div>
-                <div currency="GHC">
-                  <img src="./images/ghana.svg" alt="" /> Ghana
-                </div>
-                <div currency="NGN">
-                  <img src="./images/nigeria.svg" alt="" /> Nigeria
-                </div>
-                <div currency="XOF">
-                  <img src="./images/senegal.svg" alt="" /> Senegal
-                </div>
-                <div currency="ZAR">
-                  <img src="./images/southAfrica.svg" alt="" /> South Africa
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- select -->
+          <!-- select transaction-->
 
           <div class="select">
             <div>
@@ -120,35 +85,112 @@
             </div>
           </div>
 
-          <!--  -->
+          <!-- select country -->
 
-          <div class="sendrec">
-            <span class="little">You send</span>
-            <div>
-              <input type="number" />
-              <p>USD</p>
+          <div class="country">
+            <div class="choose">
+              <fieldset class="filedset">
+                <legend>You send</legend>
+                <input type="number" value="0.00" />
+              </fieldset>
+
+              <div class="click country">
+                <span class="country-span"
+                  ><img src="./images/USA.svg" alt="" />
+                  <span class="currency-change"> USD </span></span
+                >
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div class="search">
+                <input type="text" placeholder="Search" />
+              </div>
+              <div class="countries options">
+                <div currency="XOF">
+                  <img src="./images/benin.svg" alt="" /> Benin
+                </div>
+                <div currency="GHC">
+                  <img src="./images/ghana.svg" alt="" /> Ghana
+                </div>
+                <div currency="NGN">
+                  <img src="./images/nigeria.svg" alt="" /> Nigeria (NGN)
+                </div>
+                <div currency="NGN">
+                  <img src="./images/nigeria.svg" alt="" /> Nigeria (USD)
+                </div>
+                <div currency="XOF">
+                  <img src="./images/senegal.svg" alt="" /> Senegal
+                </div>
+                <div currency="ZAR">
+                  <img src="./images/south-africa.svg" alt="" /> South Africa
+                </div>
+                <div currency="USD">
+                  <img src="./images/USA.svg" alt="" /> United States Of America
+                </div>
+              </div>
             </div>
           </div>
 
+          <!--  -->
           <p class="spread">
-            <span class="little"> Exchange rate: </span>
+            <span
+              ><img src="./images/arrow-decrease-svgrepo-com.png" alt="" /><span
+                class="little"
+              >
+                Exchange rate:
+              </span></span
+            >
             <span> 1.00 USD = 440.63 USD </span>
           </p>
+          <!-- select country -->
 
-          <div class="sendrec">
-            <span class="little">Recipient gets</span>
-            <div>
-              <input type="number" />
-              <p class="currency-change">NGN</p>
+          <div class="country">
+            <div class="choose">
+              <fieldset class="filedset">
+                <legend>Recipient gets</legend>
+                <input type="number" value="0.00" />
+              </fieldset>
+
+              <div class="click country">
+                <span class=""
+                  ><img src="./images/nigeria.svg" alt="" />
+                  <span> NGN </span></span
+                >
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div class="search">
+                <input type="text" placeholder="Search" />
+              </div>
+              <div class="countries options">
+                <div currency="XOF">
+                  <img src="./images/benin.svg" alt="" /> Benin
+                </div>
+                <div currency="GHC">
+                  <img src="./images/ghana.svg" alt="" /> Ghana
+                </div>
+                <div currency="NGN">
+                  <img src="./images/nigeria.svg" alt="" /> Nigeria
+                </div>
+                <div currency="XOF">
+                  <img src="./images/senegal.svg" alt="" /> Senegal
+                </div>
+                <div currency="ZAR">
+                  <img src="./images/south-africa.svg" alt="" /> South Africa
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="space">
+          <div class="for-spread">
             <p class="spread">
               <span class="little"> Fee: </span>
               <span> USD </span>
             </p>
-
             <p class="spread">
               <span class="little"> Total Amount: </span>
               <span> USD </span>
