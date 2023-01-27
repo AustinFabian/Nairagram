@@ -2598,6 +2598,7 @@ ul.field-list li div span {
 
 form.beneficiary-details{
   width: 400px;
+  height: fit-content;
   padding: 40px 20px;
   box-shadow: 2px 2px 2px 4px rgba(145,150,153,0.1);
   display: flex;
