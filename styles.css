@@ -221,7 +221,6 @@ nav div .btn-bg-green:nth-child(1) {
 
 .body1 > div:nth-child(1) {
   /* width: 47%; */
-  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -230,6 +229,7 @@ nav div .btn-bg-green:nth-child(1) {
 .body1 > div:nth-child(1) > p:nth-child(1) {
   font-size: 72px;
   text-align: left;
+  color: #fff;
   font-weight: 900;
   line-height: 75px;
   width: 558px;
@@ -238,6 +238,7 @@ nav div .btn-bg-green:nth-child(1) {
 
 .body1 > div:nth-child(1) > p:nth-child(2) {
   font-size: 20px;
+  color: #fff;
 }
 
 .qr-code-img {
