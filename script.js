@@ -60,7 +60,8 @@ $(document).ready(function () {
   });
 
   // referral and toogle
-  $(".slider").click(function () {
+  $(".coupon").click(function () {
+    console.log("yes");
     $(this).parent().parent().siblings("div").find(".referral").fadeToggle();
     $(this).toggleClass("slide");
   });
@@ -88,8 +89,9 @@ $(document).ready(function () {
           .css({
             borderColor: "green",
             boxShadow: "0px 1px 2px 1px rgba(3,140,51,0.2)",
+            color: "#026224"
           });
-      } else {
+      } else{
         var flag = $(this).children("img").attr("src");
         var currency = $(this).attr("currency");
         $(this)
@@ -102,7 +104,13 @@ $(document).ready(function () {
         $(this).parent().parent().siblings().find(".currency-change").text(currency);
       }
 
-      $(this).parent().parent().fadeOut();
+      if($(this).parent().attr("class").includes("field")){
+        var innerHtml = $(this).html();
+        $(this).parent().parent().siblings().find("fieldset span").html(innerHtml).css({gap: "10px",
+      fontWeight: "700"})
+      }
+
+      $(".dropdown").fadeOut();
     });
   });
 

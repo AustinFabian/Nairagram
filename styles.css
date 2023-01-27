@@ -71,9 +71,9 @@ fieldset legend {
   width: fit-content;
 }
 
-fieldset.fieldset-short {
+/* fieldset.fieldset-short {
   width: 157px;
-}
+} */
 
 fieldset input {
   width: 100%;
@@ -291,7 +291,7 @@ nav div .btn-bg-green:nth-child(1) {
 .choose > fieldset {
   flex-grow: 1;
   border-radius: 5px 0 0 5px;
-  height: 65px;
+  height: 63px;
 }
 
 .choose > fieldset legend {
@@ -424,7 +424,7 @@ form .country div:hover .fa {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 15px;
   margin-bottom: 5px;
   cursor: pointer;
   gap: 20px;
@@ -453,8 +453,8 @@ form .country div:hover .fa {
   color: #5e6366;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 0 30px;
+  gap: 5px;
+  padding: 0 15px;
   cursor: pointer;
   transition: 0.4s all ease;
 }
@@ -476,7 +476,8 @@ form .country div:hover .fa {
 
 .payment span {
   display: flex;
-  gap: 20px;
+  gap: 5px;
+  align-items: center;
 }
 
 /*  */
@@ -516,6 +517,7 @@ div.space {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: black;
 }
 
 div.sendrec > div {
@@ -1202,7 +1204,8 @@ footer {
   cursor: pointer;
 }
 
-.loginform form button {
+.loginform form button,
+.btn-long {
   width: 100%;
   height: 45px;
   border: none;
@@ -1217,7 +1220,8 @@ footer {
   cursor: pointer;
 }
 
-.loginform form button:hover {
+.loginform form button:hover,
+.btn-long:hover {
   background-color: #026224;
 }
 
@@ -1600,7 +1604,7 @@ ul.field-list li > * {
 }
 
 .my-profile .body1 .flex div:nth-child(2) {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1696,7 +1700,7 @@ ul.field-list li > * {
 
 .acc-v-process > div:nth-child(2) .line-div,
 .for-line-div .line-div {
-  width: 55%;
+  width: 59%;
 }
 
 .acc-v-process > div:nth-child(2) .under,
@@ -1708,9 +1712,13 @@ ul.field-list li > * {
   padding-top: 40px;
 }
 
-.acc-v-process > div:nth-child(2) .under p:nth-child(2),
-.acc-v-process > div:nth-child(2) .under p:nth-child(3) {
+.acc-v-process > div:nth-child(2) .under {
+  width: 65%;
+}
+
+.acc-v-process .under > * {
   margin-right: 45px;
+  color: #c8cccf;
 }
 
 .acc-v-process > div:nth-child(2) .line-div .line,
@@ -2417,9 +2425,258 @@ ul.field-list li div span {
 .send-money .for-line-div .under {
   color: #c5c9cc;
   padding: 0;
+  font-size: 14px;
 }
 
 .send-money .for-line-div .under .active-process {
   color: var(--primary-color);
   font-size: 14px;
+}
+
+/* bank transfer page styling starts here */
+
+.bank-transfer .body1 .form-div form {
+  width: 358px;
+  padding: 10px 10px 20px 10px;
+  gap: 10px;
+}
+
+.bank-transfer .body1 .form-div form fieldset {
+  font-size: 16px;
+}
+
+.bank-transfer .body1 .form-div form fieldset legend {
+  font-size: 12px;
+}
+
+.bank-transfer .body1 .form-div form .spread span {
+  font-size: 14px;
+  color: #919699;
+}
+
+.bank-transfer .body1 .form-div > p {
+  margin: 30px 0 20px 0;
+  font-size: 14px;
+  color: #919699;
+  font-weight: 700;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #919699;
+}
+
+.bank-transfer .body1 .form-div .space {
+  gap: 10px;
+  font-size: 14px;
+  color: #919699;
+}
+
+.coupon-div {
+  margin-top: 10px;
+}
+
+.coupon-div .coupon {
+  color: #038c33;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.add-coupon {
+  margin-top: 15px;
+}
+
+.add-coupon div p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-coupon div p input {
+  width: 231px;
+  height: 50px;
+  border: 1px solid #e3e5e5;
+  padding: 15px;
+  font-size: 16px;
+  color: #5e6366;
+}
+
+.add-coupon div p button {
+  width: 106px;
+}
+
+.bank-transfer .body1 .form-div .button-large {
+  margin: 30px 0;
+}
+
+.number {
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.number > * {
+  flex-grow: 1;
+}
+
+.number > div {
+  height: 55px;
+  border: 1px solid #e3e5e5;
+  font-size: 14px;
+  color: #3e4345;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number > fieldset {
+  border-radius: 0 8px 8px 0;
+}
+
+.bank-transfer .button-large:hover {
+  background: #026224;
+}
+
+.bank-transfer .under > p:nth-child(2),
+.bank-transfer .under > p:nth-child(3) {
+  margin-right: 35px;
+}
+
+/* bt-beneficiary-details page styling starts here */
+
+.done{
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.beneficiary .for-line-div .line-div .line1:before {
+  width: 41%;
+}
+
+.beneficiary .for-line-div .line-div .line > div:nth-child(2) {
+  border-color: #038c33;
+}
+
+.beneficiary .under > p:nth-child(2),
+.beneficiary .under > p:nth-child(3) {
+  margin-right: 35px;
+}
+
+.beneficiary .body1 .for-line-div > *:not(.line-div) {
+  width: 62%;
+}
+
+.go-back{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.go-back p{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f6f8f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lato16px span{
+  font-size: 12px;
+}
+
+.details{
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+form.beneficiary-details{
+  width: 400px;
+  padding: 40px 20px;
+  box-shadow: 2px 2px 2px 4px rgba(145,150,153,0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+form.beneficiary-details ul{
+  height: 180px;
+  overflow-y: scroll;
+}
+
+form.beneficiary-details select{
+  height: 45px;
+}
+
+form.beneficiary-details .lato16px{
+  color: var(--primary-color);
+}
+
+form.beneficiary-details fieldset legend{
+  display: none;
+}
+
+form.beneficiary-details .button-large:hover{
+  background: #026224;
+}
+
+form.beneficiary-details > span{
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 14px;
+  color: #919699;
+}
+
+form.beneficiary-details > span input{
+  width: 16px;
+  height: 16px;
+}
+
+.top{
+  padding-top: 15px;
+  border-top: 1px solid #e3e5e5;
+}
+
+.summary{
+  width: 362px;
+  min-height: 350px;
+  background: #fffcf2;
+  border-radius: 10px;
+  border: 2px solid #fff6d3;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.summary div{
+  width: 100%;
+}
+
+.summary div > *{
+  padding: 10px 0;
+}
+
+.summary div .spread:last-child{
+  border-top: 1px solid #c5c9cc;
+  font-weight: 700;
+}
+
+.beneficiary .nairagram-ad{
+  margin-top: 30px;
+}
+
+
+/* sender-information page styling starts here */
+
+.sender-information .for-line-div .line-div .line1:before{
+  width: 73%;
 }
