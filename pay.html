@@ -13,9 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div
-      class="container header2 send-money my-profile beneficiary sender-information"
-    >
+    <div class="container header2 send-money my-profile beneficiary pay">
       <!-- nav -->
       <nav>
         <img src="./images/Logo (1).svg" alt="" />
@@ -56,7 +54,9 @@
               <div class="done">
                 <i class="fa fa-check" aria-hidden="true"></i>
               </div>
-              <div class="active-process">3</div>
+              <div class="done">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
               <div></div>
             </div>
           </div>
@@ -64,7 +64,7 @@
           <div class="under">
             <p>Amount & delivery</p>
             <p>Beneficiary details</p>
-            <p class="active-process">Sender details</p>
+            <p>Sender details</p>
             <p>Review & send</p>
           </div>
 
@@ -76,80 +76,91 @@
           </div>
 
           <div>
-            <p class="lato16px">
-              Please provide source of funds information
-            </p>
+            <p class="lato16px">Select your mode of payment</p>
 
             <div class="details">
               <form action="" class="beneficiary-details">
-                <p class="lato16px">Source of funds</p>
+                <p>
+                  <span>Only debit cards are accepted</span>
+                  <img src="./images/mastercard-and-visa.png" alt="" />
+                </p>
+
+                <div class="for-spread">
+                  <p class="spread">
+                    <span class="little">
+                      <img src="./images/ash-mastercard.svg" alt="" /> **** 1923
+                    </span>
+                    <span> <input type="radio" name="card" /> </span>
+                  </p>
+                  <p class="spread">
+                    <span class="little"
+                      ><img src="./images/ash-visacard.svg" alt="" /> **** 2568
+                    </span>
+                    <span> <input type="radio" name="card" /> </span>
+                  </p>
+                  <p class="spread">
+                    <span class="little">
+                      <img src="./images/ash-card.svg" alt="" /> Add new
+                      card</span
+                    >
+                    <span> <input type="radio" name="card" /> </span>
+                  </p>
+                </div>
+
+                <p class="lato16px">Card information</p>
 
                 <ul class="field-list">
                   <li>
-                    <select name="" id="">
-                      <option value="">Relationship to beneficiary</option>
-                      <option value="">Father</option>
-                      <option value="">Mother</option>
-                      <option value="">Spouse</option>
-                      <option value="">Child</option>
-                      <option value="">Sibling</option>
-                      <option value="">Other</option>
-                    </select>
+                    <div>
+                      <fieldset class="">
+                        <legend class="show-legend">Card holder name</legend>
+                        <p>Tommy Bowers</p>
+                      </fieldset>
+                    </div>
                   </li>
 
                   <li>
-                    <select name="" id="">
-                      <option value="">Source of funds</option>
-                      <option value="">Work</option>
-                      <option value="">Business</option>
-                      s
-                    </select>
+                    <div>
+                      <fieldset class="">
+                        <legend>Card number</legend>
+                        <input type="text" placeholder="Email" />
+                      </fieldset>
+                      <span>please enter a valid card number</span>
+                    </div>
                   </li>
+
+                  <li>
+                    <div>
+                      <fieldset class="fieldset-short">
+                        <legend>Expiry Date</legend>
+                        <input type="text" placeholder="Expiry Date" />
+                      </fieldset>
+                      <span>please enter an expiry date</span>
+                    </div>
+                    <div>
+                      <fieldset class="fieldset-short">
+                        <legend>CVV</legend>
+                        <input type="text" placeholder="CVV" />
+                      </fieldset>
+                      <span>please enter a CVV</span>
+                    </div>
+                  </li>
+
+                  <p class="spread">
+                    <span>
+                        <input type="checkbox" name="" id=""> Save card
+                      </span>
+                      <img src="./images/i.svg" alt="">
+                  </p>
                 </ul>
 
-                <p class="lato16px">Billing Information</p>
-
-                <p>
-                  Verify your billing information below, please ensure the
-                  details below match your bank account information.
+                <p class="spread">
+                    <span>
+                        <input type="checkbox" name="" id=""> I accept<a href="">terms and conditions</a>
+                    </span>
                 </p>
 
-                <ul class="field-list show-legend">
-                  <li>
-                    <fieldset class="fieldset-short">
-                      <legend>First name</legend>
-                      <p>Lerona</p>
-                    </fieldset>
-                    <fieldset class="fieldset-short">
-                      <legend>Last name</legend>
-                      <p>Howe</p>
-                    </fieldset>
-                  </li>
-                  <li>
-                    <fieldset class="fieldset-short">
-                      <legend>Email</legend>
-                      <p>Birelle21@yahoo.com</p>
-                    </fieldset>
-                  </li>
-                  <li>
-                    <fieldset class="fieldset-short">
-                      <legend>City</legend>
-                      <p>Kuphalton</p>
-                    </fieldset>
-                    <fieldset class="fieldset-short">
-                      <legend>Zip code</legend>
-                      <p>72169</p>
-                    </fieldset>
-                  </li>
-                  <li>
-                    <fieldset class="fieldset-short">
-                      <legend>Country</legend>
-                      <p>Missouri</p>
-                    </fieldset>
-                  </li>
-                </ul>
-
-                <button class="button-large">Continue</button>
+                <button class="button-large">Pay</button>
               </form>
 
               <!--  -->

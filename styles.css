@@ -82,6 +82,11 @@ fieldset input {
   height: 100%;
 }
 
+.for-spread{
+  display: flex;
+  flex-direction: column;
+}
+
 ul {
   list-style-type: none;
 }
@@ -638,11 +643,10 @@ div.sendrec > div p {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .flex1 > * {
-  width: 279px;
+  width: 100% !important;
   height: 380px;
   border-radius: 10px;
   border: 2px solid transparent;
@@ -1219,6 +1223,9 @@ footer {
   transition: all ease-in-out 0.2s;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loginform form button:hover,
@@ -1605,7 +1612,7 @@ ul.field-list li > * {
 }
 
 .my-profile .body1 .flex div:nth-child(2) {
-  width: 50%;
+  width: 43%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1675,10 +1682,34 @@ ul.field-list li > * {
   top: 0;
   background-color: #e53935;
   border-radius: 8px;
+  width: 25%;
 }
 
-.line1:before {
-  width: 25%;
+/* my-profile-complete page styling starts here */
+
+.my-profile-complete .line:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #038c33;
+  border-radius: 8px;
+}
+
+.my-profile-complete .basic-info .btn-small{
+  width: 100%;
+  background: #fff;
+}
+
+.my-profile-complete .basic-info .btn-small:hover{
+  background: #038c33;
+  color: white;
+}
+
+.my-profile-complete .body1 .flex{
+  margin-top: 30px;
 }
 
 /* account-verification styling starts here */
@@ -1907,6 +1938,10 @@ ul.field-list li div span {
   color: #d2f0db;
 }
 
+.complete div.width-30-percent{
+  margin-top: 112px;
+}
+
 /* my cards page styling starts here */
 
 .cards-div {
@@ -2004,12 +2039,26 @@ ul.field-list li div span {
   padding: 20px 20px 50px 20px;
 }
 
+.my-cards .modal-content .field-list{
+  height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .my-cards .modal-content .field-list li {
   gap: 10px;
 }
 
 .my-cards .modal-content .field-list li div .fieldset-short {
   width: 115px;
+}
+
+/* .my-cards .modal-content .field-list li div{
+  min-height: 100px;
+} */
+
+.my-cards .modal-content .field-list li fieldset legend{
+  display: none;
 }
 
 .my-cards .modal-dialog-centered {
@@ -2071,7 +2120,7 @@ ul.field-list li div span {
 .my-recipients .body1 {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 55px;
   justify-content: flex-start;
 }
 
@@ -2429,9 +2478,9 @@ ul.field-list li div span {
   font-size: 14px;
 }
 
-.send-money .for-line-div .under .active-process {
+.active-process {
   color: var(--primary-color);
-  font-size: 14px;
+  border-color: #038c33 !important;
 }
 
 /* bank transfer page styling starts here */
@@ -2550,6 +2599,7 @@ ul.field-list li div span {
 .done{
   background: var(--primary-color) !important;
   color: white !important;
+  border-color: #038c33 !important;
 }
 
 .beneficiary .for-line-div .line-div .line1:before {
@@ -2597,7 +2647,7 @@ ul.field-list li div span {
 }
 
 form.beneficiary-details{
-  width: 400px;
+  min-width: 400px;
   height: fit-content;
   padding: 40px 20px;
   box-shadow: 2px 2px 2px 4px rgba(145,150,153,0.1);
@@ -2610,10 +2660,18 @@ form.beneficiary-details{
 form.beneficiary-details ul{
   height: 180px;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.no-overflow{
+  height: fit-content !important;
+  overflow: hidden !important;
 }
 
 form.beneficiary-details select{
   height: 45px;
+  color: #919699;
+  border-radius: 8px;
 }
 
 form.beneficiary-details .lato16px{
@@ -2679,6 +2737,258 @@ form.beneficiary-details > span input{
 
 /* sender-information page styling starts here */
 
+.sender-information form.beneficiary-details{
+  padding: 30px;
+}
+
+.sender-information form.beneficiary-details p:not(.lato16px){
+  font-size: 14px;
+}
+
 .sender-information .for-line-div .line-div .line1:before{
   width: 73%;
+}
+
+.sender-information form.beneficiary-details ul.show-legend li fieldset legend,form.beneficiary-details ul li fieldset .show-legend{
+  display: inline;
+}
+
+.sender-information form.beneficiary-details ul{
+  height: fit-content;
+}
+
+/* pay page styling starts here */
+
+.pay .for-line-div .line-div .line1:before{
+  width: 100%;
+}
+
+.pay .for-line-div .line-div .line1 div:last-child{
+  border: 10px solid #038c33;
+}
+
+.pay form.beneficiary-details > p:nth-child(1){
+  color: #e53935;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pay form.beneficiary-details > p:nth-child(1) img{
+  width: 55px;
+  height: 20px;
+}
+
+.pay .for-spread{
+  gap: 5px;
+}
+
+.pay .for-spread input{
+  height: 24px;
+  width: 24px;
+  accent-color: #038c33;
+}
+
+.pay .for-spread .little{
+  display: flex;
+  align-items: center;
+}
+
+.pay .for-spread .little img{
+  width: 24px;
+  height: 24px;
+}
+
+.pay form.beneficiary-details .lato16px{
+  color: #919699;
+}
+
+.pay form.beneficiary-details .spread > span{
+  color: #919699;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pay form.beneficiary-details .spread > span a{
+  color: var(--primary-color);
+}
+
+.pay form.beneficiary-details .spread span input[type="checkbox"]{
+  height: 18px;
+  width: 18px;
+}
+
+.pay form.beneficiary-details .spread img{
+  width: 24px;
+  height: 24px;
+}
+
+/* complete page styling starts here */
+.complete div.width-30-percent button{
+  width: 208px;
+  margin-top: 20px;
+}
+
+.complete div.width-30-percent .no-style span{
+  font-weight: 700;
+}
+
+/* phone verufication page styling starts here */
+
+.phone-verification > div:nth-child(2),.free-div{
+  height: 872px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-verification > div:nth-child(2) form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 330px;
+  gap: 30px;
+}
+
+.phone-verification > div:nth-child(2) form section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.phone-verification > div:nth-child(2) form section span{
+  font-size: 14px;
+}
+
+.phone-verification > div:nth-child(2) form div{
+  display: flex;
+  gap: 20px;
+}
+
+.phone-verification > div:nth-child(2) form div > *{
+  width: 50px;
+  height: 50px;
+  padding: 0px 8px;
+  border-radius: 4px;
+  font-size: 36px;
+  color: #272a2b;
+  background-color: #f1f3f4;
+  border: none;
+}
+
+.phone-verification > div:nth-child(2) form > span{
+  font-size: 14px;
+}
+
+.phone-verification > div:nth-child(2) form > span a{
+  text-decoration: underline;
+  color: #038c33;
+}
+
+/* forgot password page styling starts here */
+
+.free-form{
+  width: 404px;
+  padding: 40px 35px;
+  border-radius: 10px;
+  min-height: 466px;
+}
+
+.forgot-password .free-form{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(145,150,153,0.25);
+}
+
+.forgot-password .free-form .lato24px{
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.forgot-password .free-form ul{
+  width: 100%;
+  margin: 30px 0;
+}
+
+.forgot-password .free-form ul li fieldset legend{
+ display: none;
+}
+
+.forgot-password .free-form .myform-control{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.forgot-password .free-form .myform-control input{
+  border: 1px solid #e3e5e5;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.forgot-password .free-form .myform-control i{
+  margin: 2px 0 0 0 !important;
+}
+
+.forgot-password .free-form .code{
+  width: 120px;
+  height: 50px;
+  padding: 0px 0px 0px 20px;
+  background-color: #f6f8f9;
+  font-size: 20px;
+  color: #272a2b;
+  border: 1px solid #c5c9cc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* forgot password sent page styling starts here */
+
+.forgot-password-sent .free-form{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(145,150,153,0.25);
+  gap: 30px;
+}
+
+.forgot-password-sent .free-form > p{
+  text-align: center;
+}
+
+/* my-cards-empty page styling starts here */
+
+.my-cards .body1 .button-div{
+  display: flex;
+  gap: 10px;
+}
+
+.my-cards .body1 .card-transaction .lato32px{
+  color: #5e6366;
+  
+  border-bottom: 2px solid #e3e5e5;
+}
+
+
+/* failed payment page styling starts here */
+
+.failed-payment .free-div .free-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.failed-payment .free-div .free-form > div{
+  text-align: center;
+}
+
+.failed-payment .free-div .free-form > div p:not(.lato20px){
+  font-size: 14px;
+  margin-top: 10px;
+  color: #5e6366;
 }
