@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&family=Roboto&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +10,26 @@
 
 :root {
   --primary-color: #038c33;
+}
+
+.white{
+  color: white !important;
+}
+
+.light-green{
+  background: #f6f8f9;
+}
+
+.left{
+  text-align: left !important;
+}
+
+.top-shift{
+  margin-top: 128px !important;
+}
+
+.not-bold{
+  font-weight: 400 !important;
 }
 
 a {
@@ -209,6 +230,11 @@ nav div .btn-bg-green:nth-child(1) {
 .btn-bg-green:hover {
   background: #026224;
   color: white;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
 }
 
 /* body1 div section styling */
@@ -605,6 +631,13 @@ div.sendrec > div p {
 
 .body3 .flex img {
   width: 250px;
+}
+
+.lato60px{
+  font-size: 60px;
+  font-weight: 900;
+  color: #272a2b;
+  text-align: center;
 }
 
 .lato48px {
@@ -1025,15 +1058,13 @@ footer {
 .about-us .flex {
   display: flex;
   justify-content: space-between;
-  padding: 0 90px 200px 112px;
+  padding: 34px 90px 200px 112px;
   flex-wrap: nowrap;
 }
 
 .about-us .flex .div-h-288 {
   width: 588px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 30px;
 }
@@ -1057,6 +1088,12 @@ footer {
   height: 444px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.about-us .flex .div-h-288 .btn-bg-green{
+  font-size: 18px;
+  width: 254px;
+  height: 60px;
 }
 
 .popUp {
@@ -1939,7 +1976,7 @@ ul.field-list li div span {
 }
 
 .complete div.width-30-percent{
-  margin-top: 112px;
+  margin-top: 128px;
 }
 
 /* my cards page styling starts here */
@@ -2991,4 +3028,180 @@ form.beneficiary-details > span input{
   font-size: 14px;
   margin-top: 10px;
   color: #5e6366;
+}
+
+/* blog page styling starts here */
+
+.blog .free-div{
+  height: fit-content;
+  flex-direction: column;
+  margin-top: 128px;
+  align-items: start;
+  gap: 80px;
+}
+
+.blog .free-div .blog-picture1{
+  height: 500px;
+  background: url("./images/large-man.svg");
+  width: 100%;
+}
+
+.blog .free-div .blog-picture1 .first-post{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255,.5),rgba(0, 0, 0,.5));
+  display: flex;
+  align-items: flex-end;
+  padding: 48px 70px;
+}
+
+.post{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.post > *{
+  text-align: start;
+}
+
+.post > .lato16px{
+  font-weight: 400;
+}
+
+.btn-bd-white{
+  width: 84px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 20px;
+  color: #f6f8f9;
+  font-size: 12px;
+  border: 2px solid #f6f8f9;
+  background: transparent;
+}
+
+.btn-bd-black{
+  width: 84px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 20px;
+  color: #000;
+  font-size: 12px;
+  border: 2px solid #000;
+  background: transparent;
+}
+
+.blog .flex-column{
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+.blog .flex-column > i .lato24px{
+  font-weight: 300;
+}
+
+.blog .flex-column > .lato20px{
+  font-weight: 400;
+}
+
+.blog .other-post{
+  min-height: 200px;
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.blog .other-post > *{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.blog > .left{
+  padding-bottom: 30px;
+}
+
+.blog .subscribe{
+  height: 232px;
+  background: #e9f9ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog .subscribe > div input{
+  width: 485px;
+  height: 50px;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: #5e6366;
+  border: 1px solid #038c33;
+  border-radius: 30px;
+  vertical-align: top;
+}
+
+.blog .subscribe > div button{
+  font-size: 16px;
+  vertical-align: top;
+  margin-left: 30px;
+  border-radius: 0;
+}
+
+.blog form{
+  margin: 100px 0 100px 0;
+}
+
+/* blog-copy page styling starts here */
+
+.blog-copy .free-div{
+  margin-top: 200px;
+}
+
+.blog-copy .write-ups{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* licensing page styling starts here */
+
+.licensing table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+.licensing table tr th{
+  font-size: 20px;
+  font-weight: 400 !important;
+  background-color: #e9f9ee;
+  border: none;
+}
+
+.licensing table tr > *{
+  border: 1px solid #e3e5e5;
+  padding: 15px 10px;
+}
+
+.licensing table tr th:nth-child(1),.licensing table tr td:nth-child(1){
+  width: 326px;
+  font-weight: 700;
+}
+
+.licensing > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+.licensing > div:nth-child(3) > div{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
