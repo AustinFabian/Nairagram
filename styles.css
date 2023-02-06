@@ -10,10 +10,24 @@
 
 :root {
   --primary-color: #038c33;
+  --unsuccessful: #e53935;
+  --pending: #fece00;
 }
 
 .white{
   color: white !important;
+}
+
+.green{
+  color: var(--primary-color) !important;
+}
+
+.red{
+  color: var(--unsuccessful);
+}
+
+.yellow{
+  color: var(--pending);
 }
 
 .light-green{
@@ -32,8 +46,26 @@
   font-weight: 400 !important;
 }
 
+.lh-30{
+  line-height: 30px;
+}
+
+.lower-alpha-type{
+  list-style-type: lower-alpha;
+  padding-left: 15px;
+}
+
+.disc-type{
+  list-style-type: disc;
+  padding-left: 15px;
+}
+
 a {
   text-decoration: none;
+}
+
+table{
+  width: 100%;
 }
 
 p {
@@ -1933,6 +1965,22 @@ ul.field-list li div span {
   color: #919699;
 }
 
+.selfie .take-shot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.take-shot canvas,.take-shot video{
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.take-shot canvas{
+  display: none;
+}
+
 .selfie .take-selfie .fa {
   font-size: 40px;
 }
@@ -2280,15 +2328,20 @@ ul.field-list li div span {
   padding-top: 70px;
 }
 
-.settings .body1 div:nth-child(2) {
+.settings .body1 > div:nth-child(2) {
   border-bottom: 2px solid #e3e5e5;
+  display: flex;
 }
 
-.settings .body1 div:nth-child(2) p button {
+.settings .body1 > div:nth-child(2) p button{
   border: none;
   padding: 15px;
   font-size: 16px;
   background: transparent;
+  border: none;
+}
+
+.settings .body1 > div:nth-child(2) p button.line-under{
   border-bottom: 2px solid #038c33;
 }
 
@@ -3006,7 +3059,7 @@ form.beneficiary-details > span input{
 
 .my-cards .body1 .card-transaction .lato32px{
   color: #5e6366;
-  
+  font-size: 24px;
   border-bottom: 2px solid #e3e5e5;
 }
 
@@ -3205,3 +3258,80 @@ form.beneficiary-details > span input{
   flex-direction: column;
   gap: 30px;
 }
+
+/*settings manage card page starts styling starts here  */
+.settings table.table-collapse{
+  margin: 15px 0;
+}
+
+table.table-collapse{
+  border-collapse: collapse;
+}
+
+table.table-collapse tr > *{
+  padding: 20px 15px;
+  border-bottom: 2px solid #c5c9cc;
+  font-size: 16px;
+}
+
+
+/* privacy-policy page styling starts here */
+
+.privacy-policy .free-div,.terms .free-div{
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 70px;
+  gap: 20px;
+  height: fit-content;
+}
+
+.privacy-policy .free-div > *{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.privacy-policy .free-div ul{
+  list-style-type: disc;
+}
+
+/* terms and consitions page styling starts here */
+
+.terms .free-div{
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.terms .free-div > div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.terms .table-of-content{
+  height: fit-content;
+  width: 332px;
+  padding: 15px 25px 30px 25px;
+  border-radius: 10px;
+  background: #f6f8f9;
+}
+
+.terms .table-of-content ul{
+  list-style-type: decimal;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.terms .table-of-content ul li a{
+  color: black;
+}
+
+.terms .table-of-content ul li a:hover{
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+

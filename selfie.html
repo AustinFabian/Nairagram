@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="container acc-v-process verification selfie">
+    <div class="container acc-v-process verification selfie" id="selfie">
       <div>
         <a href="./my-profile.html"
           ><i class="fa fa-times" aria-hidden="true"></i
@@ -22,8 +25,7 @@
       <div>
         <div class="line-div">
           <div class="line line1">
-            <div><i class="fa fa-check" aria-hidden="true"></i>
-            </div>
+            <div><i class="fa fa-check" aria-hidden="true"></i></div>
             <div><i class="fa fa-check" aria-hidden="true"></i></div>
             <div>3</div>
           </div>
@@ -34,22 +36,64 @@
           <p class="active-process">Selfie</p>
         </div>
       </div>
-      <form class="width-30-percent">
+      <div class="width-30-percent">
         <p class="lato24px">Selfie</p>
 
         <p class="no-style">Take a selfie to validate your uploaded ID card</p>
 
-        <div class="take-selfie">
-            <i class="fa fa-camera" aria-hidden="true"></i>
-            <p class="lato24px">
-                Take a selfie
-            </p>
+        <div
+          class="modal"
+          tabindex="-1"
+          id="take-photo"
+          data-bs-backdrop="static"
+        >
+          <div class="modal-dialog modal-dialog-centered for-del">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p class="modal-title">Take Photo</p>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="take-shot">
+                  <video
+                    src=""
+                    id="video"
+                    width="100%"
+                    height="100%"
+                    autoplay
+                  ></video>
+                  <canvas id="canvas" width="450" height="400"></canvas>
+
+                  <button class="btn-small bg-none" id="snap">Take Photo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="take-selfie"
+          data-bs-toggle="modal"
+          data-bs-target="#take-photo"
+        >
+          <i class="fa fa-camera" aria-hidden="true"></i>
+          <p class="lato24px">Take a selfie</p>
         </div>
 
         <button class="button-large">Continue</button>
-      </form>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
     <script src="./script.js"></script>
   </body>
 </html>

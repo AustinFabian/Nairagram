@@ -51,17 +51,18 @@ $(document).ready(function () {
   $("#loginform").submit(function (e) {
     e.preventDefault();
     $(this).css({ height: "500px" });
-    $(".fa").css({ margin: 0 });
-    $(this)
-      .find(".myform-control")
-      .removeClass("activeInput")
-      .addClass("error");
-    $(this).find(".error-message").css({ display: "flex" });
+    $(".fa").css({ marginTop: "20px" });
+    if ($(this).find("input").val() == "") {
+      $(this)
+        .find(".myform-control")
+        .removeClass("activeInput")
+        .addClass("error");
+    }
+    // $(this).find(".error-message").css({ display: "flex" });
   });
 
   // referral and toogle
   $(".coupon").click(function () {
-    console.log("yes");
     $(this).parent().parent().siblings("div").find(".referral").fadeToggle();
     $(this).toggleClass("slide");
   });
@@ -82,16 +83,12 @@ $(document).ready(function () {
       if ($(this).parent().attr("class").includes("payment-dropdown")) {
         var innerHtml = $(this).html();
         $(this).parent().siblings("div").find("span").html(innerHtml);
-        $(this)
-          .parent()
-          .siblings("div")
-          .find(".payment")
-          .css({
-            borderColor: "green",
-            boxShadow: "0px 1px 2px 1px rgba(3,140,51,0.2)",
-            color: "#026224"
-          });
-      } else{
+        $(this).parent().siblings("div").find(".payment").css({
+          borderColor: "green",
+          boxShadow: "0px 1px 2px 1px rgba(3,140,51,0.2)",
+          color: "#026224",
+        });
+      } else {
         var flag = $(this).children("img").attr("src");
         var currency = $(this).attr("currency");
         $(this)
@@ -101,13 +98,23 @@ $(document).ready(function () {
           .find(".country-span img")
           .attr("src", flag);
 
-        $(this).parent().parent().siblings().find(".currency-change").text(currency);
+        $(this)
+          .parent()
+          .parent()
+          .siblings()
+          .find(".currency-change")
+          .text(currency);
       }
 
-      if($(this).parent().attr("class").includes("field")){
+      if ($(this).parent().attr("class").includes("field")) {
         var innerHtml = $(this).html();
-        $(this).parent().parent().siblings().find("fieldset span").html(innerHtml).css({gap: "10px",
-      fontWeight: "700"})
+        $(this)
+          .parent()
+          .parent()
+          .siblings()
+          .find("fieldset span")
+          .html(innerHtml)
+          .css({ gap: "10px", fontWeight: "700" });
       }
 
       $(".dropdown").fadeOut();
@@ -182,4 +189,31 @@ $(document).ready(function () {
       $(this).removeClass("not-in-use");
     }
   });
+
+
+  // vanilla javascript code for webcam
+
+var selfie = document.getElementById("selfie");
+
+if (selfie) {
+  var video = document.getElementById("video");
+  var canvas = document.getElementById("canvas");
+
+  if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+    navigator.mediaDevices.getUserMedia({video:"true"}).then(function(stream){
+      video.srcObject = stream;
+      video.onplay()
+    })
+
+    var context = canvas.getContext("2d");
+
+    document.getElementById("snap").addEventListener("click",function(){
+      $(this).siblings("video").css({display:"none"})
+      $(this).siblings("canvas").css({display:"block"})
+      context.drawImage(video,0,0,450,400)
+    })
+  }
+}
 });
+
+
