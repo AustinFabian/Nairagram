@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&family=Roboto&display=swap");
 
 * {
   padding: 0;
@@ -14,48 +14,48 @@
   --pending: #fece00;
 }
 
-.white{
+.white {
   color: white !important;
 }
 
-.green{
+.green {
   color: var(--primary-color) !important;
 }
 
-.red{
+.red {
   color: var(--unsuccessful);
 }
 
-.yellow{
+.yellow {
   color: var(--pending);
 }
 
-.light-green{
+.light-green {
   background: #f6f8f9;
 }
 
-.left{
+.left {
   text-align: left !important;
 }
 
-.top-shift{
+.top-shift {
   margin-top: 128px !important;
 }
 
-.not-bold{
+.not-bold {
   font-weight: 400 !important;
 }
 
-.lh-30{
+.lh-30 {
   line-height: 30px;
 }
 
-.lower-alpha-type{
+.lower-alpha-type {
   list-style-type: lower-alpha;
   padding-left: 15px;
 }
 
-.disc-type{
+.disc-type {
   list-style-type: disc;
   padding-left: 15px;
 }
@@ -64,7 +64,7 @@ a {
   text-decoration: none;
 }
 
-table{
+table {
   width: 100%;
 }
 
@@ -135,7 +135,7 @@ fieldset input {
   height: 100%;
 }
 
-.for-spread{
+.for-spread {
   display: flex;
   flex-direction: column;
 }
@@ -264,7 +264,7 @@ nav div .btn-bg-green:nth-child(1) {
   color: white;
 }
 
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -494,6 +494,12 @@ form .country div:hover .fa {
   gap: 20px;
 }
 
+.choosen {
+  border-color: green;
+  box-shadow: rgb(3 140 51 / 20%) 0px 1px 2px 1px;
+  color: rgb(2, 98, 36);
+}
+
 .payment .fa {
   font-size: 22px;
 }
@@ -665,7 +671,7 @@ div.sendrec > div p {
   width: 250px;
 }
 
-.lato60px{
+.lato60px {
   font-size: 60px;
   font-weight: 900;
   color: #272a2b;
@@ -1122,7 +1128,7 @@ footer {
   cursor: pointer;
 }
 
-.about-us .flex .div-h-288 .btn-bg-green{
+.about-us .flex .div-h-288 .btn-bg-green {
   font-size: 18px;
   width: 254px;
   height: 60px;
@@ -1767,17 +1773,17 @@ ul.field-list li > * {
   border-radius: 8px;
 }
 
-.my-profile-complete .basic-info .btn-small{
+.my-profile-complete .basic-info .btn-small {
   width: 100%;
   background: #fff;
 }
 
-.my-profile-complete .basic-info .btn-small:hover{
+.my-profile-complete .basic-info .btn-small:hover {
   background: #038c33;
   color: white;
 }
 
-.my-profile-complete .body1 .flex{
+.my-profile-complete .body1 .flex {
   margin-top: 30px;
 }
 
@@ -1965,19 +1971,20 @@ ul.field-list li div span {
   color: #919699;
 }
 
-.selfie .take-shot{
+.selfie .take-shot {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.take-shot canvas,.take-shot video{
+.take-shot canvas,
+.take-shot video {
   border-radius: 50px;
   padding: 20px;
 }
 
-.take-shot canvas{
+.take-shot canvas {
   display: none;
 }
 
@@ -2023,7 +2030,7 @@ ul.field-list li div span {
   color: #d2f0db;
 }
 
-.complete div.width-30-percent{
+.complete div.width-30-percent {
   margin-top: 128px;
 }
 
@@ -2124,7 +2131,7 @@ ul.field-list li div span {
   padding: 20px 20px 50px 20px;
 }
 
-.my-cards .modal-content .field-list{
+.my-cards .modal-content .field-list {
   height: 180px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -2142,7 +2149,7 @@ ul.field-list li div span {
   min-height: 100px;
 } */
 
-.my-cards .modal-content .field-list li fieldset legend{
+.my-cards .modal-content .field-list li fieldset legend {
   display: none;
 }
 
@@ -2333,7 +2340,7 @@ ul.field-list li div span {
   display: flex;
 }
 
-.settings .body1 > div:nth-child(2) p button{
+.settings .body1 > div:nth-child(2) p button {
   border: none;
   padding: 15px;
   font-size: 16px;
@@ -2341,7 +2348,7 @@ ul.field-list li div span {
   border: none;
 }
 
-.settings .body1 > div:nth-child(2) p button.line-under{
+.settings .body1 > div:nth-child(2) p button.line-under {
   border-bottom: 2px solid #038c33;
 }
 
@@ -2686,7 +2693,7 @@ ul.field-list li div span {
 
 /* bt-beneficiary-details page styling starts here */
 
-.done{
+.done {
   background: var(--primary-color) !important;
   color: white !important;
   border-color: #038c33 !important;
@@ -2709,14 +2716,14 @@ ul.field-list li div span {
   width: 62%;
 }
 
-.go-back{
+.go-back {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
 }
 
-.go-back p{
+.go-back p {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -2726,57 +2733,57 @@ ul.field-list li div span {
   justify-content: center;
 }
 
-.lato16px span{
+.lato16px span {
   font-size: 12px;
 }
 
-.details{
+.details {
   display: flex;
   gap: 30px;
   padding: 20px 0;
 }
 
-form.beneficiary-details{
+form.beneficiary-details {
   min-width: 400px;
   height: fit-content;
   padding: 40px 20px;
-  box-shadow: 2px 2px 2px 4px rgba(145,150,153,0.1);
+  box-shadow: 2px 2px 2px 4px rgba(145, 150, 153, 0.1);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   gap: 20px;
 }
 
-form.beneficiary-details ul{
+form.beneficiary-details ul {
   height: 180px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.no-overflow{
+.no-overflow {
   height: fit-content !important;
   overflow: hidden !important;
 }
 
-form.beneficiary-details select{
+form.beneficiary-details select {
   height: 45px;
   color: #919699;
   border-radius: 8px;
 }
 
-form.beneficiary-details .lato16px{
+form.beneficiary-details .lato16px {
   color: var(--primary-color);
 }
 
-form.beneficiary-details fieldset legend{
+form.beneficiary-details fieldset legend {
   display: none;
 }
 
-form.beneficiary-details .button-large:hover{
+form.beneficiary-details .button-large:hover {
   background: #026224;
 }
 
-form.beneficiary-details > span{
+form.beneficiary-details > span {
   display: flex;
   align-items: flex-start;
   gap: 11px;
@@ -2784,17 +2791,17 @@ form.beneficiary-details > span{
   color: #919699;
 }
 
-form.beneficiary-details > span input{
+form.beneficiary-details > span input {
   width: 16px;
   height: 16px;
 }
 
-.top{
+.top {
   padding-top: 15px;
   border-top: 1px solid #e3e5e5;
 }
 
-.summary{
+.summary {
   width: 362px;
   min-height: 350px;
   background: #fffcf2;
@@ -2807,57 +2814,57 @@ form.beneficiary-details > span input{
   gap: 30px;
 }
 
-.summary div{
+.summary div {
   width: 100%;
 }
 
-.summary div > *{
+.summary div > * {
   padding: 10px 0;
 }
 
-.summary div .spread:last-child{
+.summary div .spread:last-child {
   border-top: 1px solid #c5c9cc;
   font-weight: 700;
 }
 
-.beneficiary .nairagram-ad{
+.beneficiary .nairagram-ad {
   margin-top: 30px;
 }
 
-
 /* sender-information page styling starts here */
 
-.sender-information form.beneficiary-details{
+.sender-information form.beneficiary-details {
   padding: 30px;
 }
 
-.sender-information form.beneficiary-details p:not(.lato16px){
+.sender-information form.beneficiary-details p:not(.lato16px) {
   font-size: 14px;
 }
 
-.sender-information .for-line-div .line-div .line1:before{
+.sender-information .for-line-div .line-div .line1:before {
   width: 73%;
 }
 
-.sender-information form.beneficiary-details ul.show-legend li fieldset legend,form.beneficiary-details ul li fieldset .show-legend{
+.sender-information form.beneficiary-details ul.show-legend li fieldset legend,
+form.beneficiary-details ul li fieldset .show-legend {
   display: inline;
 }
 
-.sender-information form.beneficiary-details ul{
+.sender-information form.beneficiary-details ul {
   height: fit-content;
 }
 
 /* pay page styling starts here */
 
-.pay .for-line-div .line-div .line1:before{
+.pay .for-line-div .line-div .line1:before {
   width: 100%;
 }
 
-.pay .for-line-div .line-div .line1 div:last-child{
+.pay .for-line-div .line-div .line1 div:last-child {
   border: 10px solid #038c33;
 }
 
-.pay form.beneficiary-details > p:nth-child(1){
+.pay form.beneficiary-details > p:nth-child(1) {
   color: #e53935;
   font-size: 14px;
   display: flex;
@@ -2865,36 +2872,36 @@ form.beneficiary-details > span input{
   gap: 15px;
 }
 
-.pay form.beneficiary-details > p:nth-child(1) img{
+.pay form.beneficiary-details > p:nth-child(1) img {
   width: 55px;
   height: 20px;
 }
 
-.pay .for-spread{
+.pay .for-spread {
   gap: 5px;
 }
 
-.pay .for-spread input{
+.pay .for-spread input {
   height: 24px;
   width: 24px;
   accent-color: #038c33;
 }
 
-.pay .for-spread .little{
+.pay .for-spread .little {
   display: flex;
   align-items: center;
 }
 
-.pay .for-spread .little img{
+.pay .for-spread .little img {
   width: 24px;
   height: 24px;
 }
 
-.pay form.beneficiary-details .lato16px{
+.pay form.beneficiary-details .lato16px {
   color: #919699;
 }
 
-.pay form.beneficiary-details .spread > span{
+.pay form.beneficiary-details .spread > span {
   color: #919699;
   font-size: 14px;
   display: flex;
@@ -2902,40 +2909,41 @@ form.beneficiary-details > span input{
   gap: 10px;
 }
 
-.pay form.beneficiary-details .spread > span a{
+.pay form.beneficiary-details .spread > span a {
   color: var(--primary-color);
 }
 
-.pay form.beneficiary-details .spread span input[type="checkbox"]{
+.pay form.beneficiary-details .spread span input[type="checkbox"] {
   height: 18px;
   width: 18px;
 }
 
-.pay form.beneficiary-details .spread img{
+.pay form.beneficiary-details .spread img {
   width: 24px;
   height: 24px;
 }
 
 /* complete page styling starts here */
-.complete div.width-30-percent button{
+.complete div.width-30-percent button {
   width: 208px;
   margin-top: 20px;
 }
 
-.complete div.width-30-percent .no-style span{
+.complete div.width-30-percent .no-style span {
   font-weight: 700;
 }
 
 /* phone verufication page styling starts here */
 
-.phone-verification > div:nth-child(2),.free-div{
+.phone-verification > div:nth-child(2),
+.free-div {
   height: 872px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.phone-verification > div:nth-child(2) form{
+.phone-verification > div:nth-child(2) form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -2943,7 +2951,7 @@ form.beneficiary-details > span input{
   gap: 30px;
 }
 
-.phone-verification > div:nth-child(2) form section{
+.phone-verification > div:nth-child(2) form section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2951,16 +2959,16 @@ form.beneficiary-details > span input{
   flex-direction: column;
 }
 
-.phone-verification > div:nth-child(2) form section span{
+.phone-verification > div:nth-child(2) form section span {
   font-size: 14px;
 }
 
-.phone-verification > div:nth-child(2) form div{
+.phone-verification > div:nth-child(2) form div {
   display: flex;
   gap: 20px;
 }
 
-.phone-verification > div:nth-child(2) form div > *{
+.phone-verification > div:nth-child(2) form div > * {
   width: 50px;
   height: 50px;
   padding: 0px 8px;
@@ -2971,60 +2979,60 @@ form.beneficiary-details > span input{
   border: none;
 }
 
-.phone-verification > div:nth-child(2) form > span{
+.phone-verification > div:nth-child(2) form > span {
   font-size: 14px;
 }
 
-.phone-verification > div:nth-child(2) form > span a{
+.phone-verification > div:nth-child(2) form > span a {
   text-decoration: underline;
   color: #038c33;
 }
 
 /* forgot password page styling starts here */
 
-.free-form{
+.free-form {
   width: 404px;
   padding: 40px 35px;
   border-radius: 10px;
   min-height: 466px;
 }
 
-.forgot-password .free-form{
+.forgot-password .free-form {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 8px rgba(145,150,153,0.25);
+  box-shadow: 0px 4px 8px rgba(145, 150, 153, 0.25);
 }
 
-.forgot-password .free-form .lato24px{
+.forgot-password .free-form .lato24px {
   text-align: center;
   margin-bottom: 13px;
 }
 
-.forgot-password .free-form ul{
+.forgot-password .free-form ul {
   width: 100%;
   margin: 30px 0;
 }
 
-.forgot-password .free-form ul li fieldset legend{
- display: none;
+.forgot-password .free-form ul li fieldset legend {
+  display: none;
 }
 
-.forgot-password .free-form .myform-control{
+.forgot-password .free-form .myform-control {
   width: 100%;
   margin: 10px 0;
 }
 
-.forgot-password .free-form .myform-control input{
+.forgot-password .free-form .myform-control input {
   border: 1px solid #e3e5e5;
   height: 50px;
   border-radius: 8px;
 }
 
-.forgot-password .free-form .myform-control i{
+.forgot-password .free-form .myform-control i {
   margin: 2px 0 0 0 !important;
 }
 
-.forgot-password .free-form .code{
+.forgot-password .free-form .code {
   width: 120px;
   height: 50px;
   padding: 0px 0px 0px 20px;
@@ -3039,45 +3047,44 @@ form.beneficiary-details > span input{
 
 /* forgot password sent page styling starts here */
 
-.forgot-password-sent .free-form{
+.forgot-password-sent .free-form {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 8px rgba(145,150,153,0.25);
+  box-shadow: 0px 4px 8px rgba(145, 150, 153, 0.25);
   gap: 30px;
 }
 
-.forgot-password-sent .free-form > p{
+.forgot-password-sent .free-form > p {
   text-align: center;
 }
 
 /* my-cards-empty page styling starts here */
 
-.my-cards .body1 .button-div{
+.my-cards .body1 .button-div {
   display: flex;
   gap: 10px;
 }
 
-.my-cards .body1 .card-transaction .lato32px{
+.my-cards .body1 .card-transaction .lato32px {
   color: #5e6366;
   font-size: 24px;
   border-bottom: 2px solid #e3e5e5;
 }
 
-
 /* failed payment page styling starts here */
 
-.failed-payment .free-div .free-form{
+.failed-payment .free-div .free-form {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 40px;
 }
 
-.failed-payment .free-div .free-form > div{
+.failed-payment .free-div .free-form > div {
   text-align: center;
 }
 
-.failed-payment .free-div .free-form > div p:not(.lato20px){
+.failed-payment .free-div .free-form > div p:not(.lato20px) {
   font-size: 14px;
   margin-top: 10px;
   color: #5e6366;
@@ -3085,44 +3092,56 @@ form.beneficiary-details > span input{
 
 /* blog page styling starts here */
 
-.blog .free-div{
+.blog .free-div {
   height: fit-content;
+  width: 100%;
   flex-direction: column;
   margin-top: 128px;
   align-items: start;
   gap: 80px;
+  padding-top: 70px;
 }
 
-.blog .free-div .blog-picture1{
-  height: 500px;
-  background: url("./images/large-man.svg");
+.blog .free-div .blog-picture1 {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  background: #f6f8f9;
+  padding: 50px;
   width: 100%;
 }
 
-.blog .free-div .blog-picture1 .first-post{
+.blog .free-div .blog-picture1 .first-post {
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(255, 255, 255,.5),rgba(0, 0, 0,.5));
   display: flex;
-  align-items: flex-end;
-  padding: 48px 70px;
+  align-items: center;
 }
 
-.post{
+.blog .free-div .blog-picture1 .first-post .btn-bg-black {
+  margin-top: 25px;
+}
+
+.blog .free-div .blog-picture1 > img {
+  width: 418px;
+  height: 418px;
+}
+
+.post {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
 
-.post > *{
+.post > * {
   text-align: start;
 }
 
-.post > .lato16px{
-  font-weight: 400;
+.post span.lato16px {
+  margin-right: 10px;
 }
 
-.btn-bd-white{
+.btn-bd-white {
   width: 84px;
   height: 30px;
   padding: 5px;
@@ -3133,7 +3152,7 @@ form.beneficiary-details > span input{
   background: transparent;
 }
 
-.btn-bd-black{
+.btn-bd-black {
   width: 84px;
   height: 30px;
   padding: 5px;
@@ -3144,7 +3163,24 @@ form.beneficiary-details > span input{
   background: transparent;
 }
 
-.blog .flex-column{
+.btn-bg-black {
+  max-width: 143px;
+  padding: 15px 30px;
+  background-color: #121212;
+  color: #f6f8f9;
+  font-size: 16px;
+  border: 1px solid #3e4345;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.2s all ease;
+}
+
+.blog .btn-bg-black:hover {
+  background: transparent;
+  color: black;
+}
+
+.blog .flex-column {
   align-items: center;
   text-align: center;
   gap: 15px;
@@ -3152,15 +3188,15 @@ form.beneficiary-details > span input{
   width: 100%;
 }
 
-.blog .flex-column > i .lato24px{
+.blog .flex-column > i .lato24px {
   font-weight: 300;
 }
 
-.blog .flex-column > .lato20px{
+.blog .flex-column > .lato20px {
   font-weight: 400;
 }
 
-.blog .other-post{
+.blog .other-post {
   min-height: 200px;
   display: flex;
   width: 100%;
@@ -3168,16 +3204,16 @@ form.beneficiary-details > span input{
   padding: 30px 0;
 }
 
-.blog .other-post > *{
+.blog .other-post > * {
   flex-grow: 1;
   width: 100%;
 }
 
-.blog > .left{
+.blog > .left {
   padding-bottom: 30px;
 }
 
-.blog .subscribe{
+.blog .subscribe {
   height: 232px;
   background: #e9f9ee;
   display: flex;
@@ -3187,7 +3223,7 @@ form.beneficiary-details > span input{
   gap: 30px;
 }
 
-.blog .subscribe > div input{
+.blog .subscribe > div input {
   width: 485px;
   height: 50px;
   padding: 15px 20px;
@@ -3198,24 +3234,24 @@ form.beneficiary-details > span input{
   vertical-align: top;
 }
 
-.blog .subscribe > div button{
+.blog .subscribe > div button {
   font-size: 16px;
   vertical-align: top;
   margin-left: 30px;
   border-radius: 0;
 }
 
-.blog form{
+.blog form {
   margin: 100px 0 100px 0;
 }
 
 /* blog-copy page styling starts here */
 
-.blog-copy .free-div{
+.blog-copy .free-div {
   margin-top: 200px;
 }
 
-.blog-copy .write-ups{
+.blog-copy .write-ups {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -3223,61 +3259,62 @@ form.beneficiary-details > span input{
 
 /* licensing page styling starts here */
 
-.licensing table{
+.licensing table {
   border-collapse: collapse;
   width: 100%;
   text-align: left;
 }
 
-.licensing table tr th{
+.licensing table tr th {
   font-size: 20px;
   font-weight: 400 !important;
   background-color: #e9f9ee;
   border: none;
 }
 
-.licensing table tr > *{
+.licensing table tr > * {
   border: 1px solid #e3e5e5;
   padding: 15px 10px;
 }
 
-.licensing table tr th:nth-child(1),.licensing table tr td:nth-child(1){
+.licensing table tr th:nth-child(1),
+.licensing table tr td:nth-child(1) {
   width: 326px;
   font-weight: 700;
 }
 
-.licensing > div:nth-child(3){
+.licensing > div:nth-child(3) {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-top: 50px;
 }
 
-.licensing > div:nth-child(3) > div{
+.licensing > div:nth-child(3) > div {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 /*settings manage card page starts styling starts here  */
-.settings table.table-collapse{
+.settings table.table-collapse {
   margin: 15px 0;
 }
 
-table.table-collapse{
+table.table-collapse {
   border-collapse: collapse;
 }
 
-table.table-collapse tr > *{
+table.table-collapse tr > * {
   padding: 20px 15px;
   border-bottom: 2px solid #c5c9cc;
   font-size: 16px;
 }
 
-
 /* privacy-policy page styling starts here */
 
-.privacy-policy .free-div,.terms .free-div{
+.privacy-policy .free-div,
+.terms .free-div {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
@@ -3286,30 +3323,30 @@ table.table-collapse tr > *{
   height: fit-content;
 }
 
-.privacy-policy .free-div > *{
+.privacy-policy .free-div > * {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.privacy-policy .free-div ul{
+.privacy-policy .free-div ul {
   list-style-type: disc;
 }
 
 /* terms and consitions page styling starts here */
 
-.terms .free-div{
+.terms .free-div {
   padding-top: 30px;
   padding-bottom: 70px;
 }
 
-.terms .free-div > div{
+.terms .free-div > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.terms .table-of-content{
+.terms .table-of-content {
   height: fit-content;
   width: 332px;
   padding: 15px 25px 30px 25px;
@@ -3317,7 +3354,7 @@ table.table-collapse tr > *{
   background: #f6f8f9;
 }
 
-.terms .table-of-content ul{
+.terms .table-of-content ul {
   list-style-type: decimal;
   padding: 0 25px;
   display: flex;
@@ -3325,13 +3362,15 @@ table.table-collapse tr > *{
   gap: 10px;
 }
 
-.terms .table-of-content ul li a{
+.terms .table-of-content ul li a {
   color: black;
 }
 
-.terms .table-of-content ul li a:hover{
+.terms .table-of-content ul li a:hover {
   text-decoration: underline;
   color: var(--primary-color);
 }
 
-
+.mobile-money .details{
+  align-items: flex-start;
+}

@@ -48,18 +48,18 @@ $(document).ready(function () {
   });
 
   // form submits
-  $("#loginform").submit(function (e) {
-    e.preventDefault();
-    $(this).css({ height: "500px" });
-    $(".fa").css({ marginTop: "20px" });
-    if ($(this).find("input").val() == "") {
-      $(this)
-        .find(".myform-control")
-        .removeClass("activeInput")
-        .addClass("error");
-    }
-    // $(this).find(".error-message").css({ display: "flex" });
-  });
+  // $("#loginform").submit(function (e) {
+  //   e.preventDefault();
+  //   $(this).css({ height: "500px" });
+  //   $(".fa").css({ marginTop: "20px" });
+  //   if ($(this).find("input").val() == "") {
+  //     $(this)
+  //       .find(".myform-control")
+  //       .removeClass("activeInput")
+  //       .addClass("error");
+  //   }
+  //   $(this).find(".error-message").css({ display: "flex" });
+  // });
 
   // referral and toogle
   $(".coupon").click(function () {
@@ -82,7 +82,12 @@ $(document).ready(function () {
     $(this).click(function () {
       if ($(this).parent().attr("class").includes("payment-dropdown")) {
         var innerHtml = $(this).html();
+        var filePath = $(this).attr("file-path");
+
+        console.log(filePath);
+
         $(this).parent().siblings("div").find("span").html(innerHtml);
+        $(this).closest("form").attr("action",filePath)
         $(this).parent().siblings("div").find(".payment").css({
           borderColor: "green",
           boxShadow: "0px 1px 2px 1px rgba(3,140,51,0.2)",
@@ -148,7 +153,6 @@ $(document).ready(function () {
   });
 
   if ($("ul.field-list li fieldset input").val()) {
-    console.log("true");
     $(this).siblings("legend").css({ display: "inline" });
   }
   $("ul.field-list li fieldset input")
