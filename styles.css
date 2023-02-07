@@ -355,7 +355,7 @@ nav div .btn-bg-green:nth-child(1) {
 .choose > fieldset {
   flex-grow: 1;
   border-radius: 5px 0 0 5px;
-  height: 63px;
+  height: 65px;
 }
 
 .choose > fieldset legend {
@@ -498,6 +498,7 @@ form .country div:hover .fa {
   border-color: green;
   box-shadow: rgb(3 140 51 / 20%) 0px 1px 2px 1px;
   color: rgb(2, 98, 36);
+  font-size: 18px;
 }
 
 .payment .fa {
@@ -2741,6 +2742,7 @@ ul.field-list li div span {
   display: flex;
   gap: 30px;
   padding: 20px 0;
+  align-items: flex-start;
 }
 
 form.beneficiary-details {
@@ -3371,6 +3373,3 @@ table.table-collapse tr > * {
   color: var(--primary-color);
 }
 
-.mobile-money .details{
-  align-items: flex-start;
-}

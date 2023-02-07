@@ -83,9 +83,6 @@ $(document).ready(function () {
       if ($(this).parent().attr("class").includes("payment-dropdown")) {
         var innerHtml = $(this).html();
         var filePath = $(this).attr("file-path");
-
-        console.log(filePath);
-
         $(this).parent().siblings("div").find("span").html(innerHtml);
         $(this).closest("form").attr("action",filePath)
         $(this).parent().siblings("div").find(".payment").css({
