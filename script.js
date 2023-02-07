@@ -77,6 +77,7 @@ $(document).ready(function () {
   });
 
   var options = $(".options div");
+  var locations = document.getElementById("location")
 
   $.each(options, function (index, value) {
     $(this).click(function () {
@@ -90,6 +91,11 @@ $(document).ready(function () {
           boxShadow: "0px 1px 2px 1px rgba(3,140,51,0.2)",
           color: "#026224",
         });
+
+        if(locations){
+          console.log(filePath);
+          location.assign(filePath)
+        }
       } else {
         var flag = $(this).children("img").attr("src");
         var currency = $(this).attr("currency");

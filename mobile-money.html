@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container header2 send-money my-profile bank-transfer mobile-money">
+    <div id="location"  class="container header2 send-money my-profile bank-transfer mobile-money">
       <!-- nav -->
       <nav>
         <a href="./index.html"><img src="./images/Logo (1).svg" alt="" /></a>
@@ -63,189 +63,185 @@
 
           <!--  -->
 
-          <div class="details">
-            <div class="form-div">
-                <form action="">
-                  <!-- select transaction-->
-    
-                  <div class="select">
-                    <div>
-                      <div class="click payment choosen">
-                        <span
-                          ><i class="fa fa-mobile" aria-hidden="true"></i> Mobile
-                          Wallet</span
-                        >
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="payment-dropdown dropdown options">
-                      <div>
-                        <i class="fa fa-university" aria-hidden="true"></i> Bank
-                        Transfer
-                      </div>
-                      <div>
-                        <i class="fa fa-mobile" aria-hidden="true"></i> Mobile
-                        Wallet
-                      </div>
-                      <div>
-                        <i class="fa fa-money" aria-hidden="true"></i> Cash Pickup
-                      </div>
-                      <div>
-                        <i class="fa fa-phone" aria-hidden="true"></i> Airtime top up
-                      </div>
-                    </div>
-                  </div>
-    
-                  <!-- select country -->
-    
-                  <div class="select">
-                    <div>
-                      <fieldset class="filedset click payment">
-                        <legend>Send to</legend>
-                        <span>Select Country</span>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                      </fieldset>
-                    </div>
-                    <div class="dropdown">
-                      <div class="search">
-                        <input type="text" placeholder="Search" />
-                      </div>
-                      <div class="countries options field">
-                        <div currency="XOF">
-                          <img src="./images/benin.svg" alt="" /> Benin
-                        </div>
-                        <div currency="GHC">
-                          <img src="./images/ghana.svg" alt="" /> Ghana
-                        </div>
-                        <div currency="NGN">
-                          <img src="./images/nigeria.svg" alt="" /> Nigeria
-                        </div>
-                        <div currency="XOF">
-                          <img src="./images/senegal.svg" alt="" /> Senegal
-                        </div>
-                        <div currency="ZAR">
-                          <img src="./images/south-africa.svg" alt="" /> South
-                          Africa
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
+          <div class="form-div">
+            <form action="">
+              <!-- select transaction-->
 
-                  <div class="number">
-                    <div>+234</div>
-                    <fieldset class="filedset">
-                      <legend>Phone number</legend>
-                      <input type="number"/>
-                    </fieldset>
-                  </div>
-    
-                  <!-- select country -->
-    
-                  <div class="country">
-                    <div class="choose">
-                      <fieldset class="filedset">
-                        <legend>You send</legend>
-                        <input type="number" value="0.00" />
-                      </fieldset>
-    
-                      <div class="click country">
-                        <span class="country-span"
-                          ><img src="./images/USA.svg" alt="" />
-                          <span class="currency-change"> USD </span></span
-                        >
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                      </div>
-                    </div>
-    
-                    <div class="dropdown">
-                      <div class="search">
-                        <input type="text" placeholder="Search" />
-                      </div>
-                      <div class="countries options">
-                        <div currency="XOF">
-                          <img src="./images/benin.svg" alt="" /> Benin
-                        </div>
-                        <div currency="GHC">
-                          <img src="./images/ghana.svg" alt="" /> Ghana
-                        </div>
-                        <div currency="NGN">
-                          <img src="./images/nigeria.svg" alt="" /> Nigeria
-                        </div>
-                        <div currency="XOF">
-                          <img src="./images/senegal.svg" alt="" /> Senegal
-                        </div>
-                        <div currency="ZAR">
-                          <img src="./images/south-africa.svg" alt="" /> South
-                          Africa
-                        </div>
-                        <div currency="USD">
-                          <img src="./images/USA.svg" alt="" /> United States Of
-                          America
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!--  -->
-                  <p class="spread">
+              <div class="select">
+                <div>
+                  <div class="click payment choosen">
                     <span
-                      ><img
-                        src="./images/arrow-decrease-svgrepo-com.png"
-                        alt=""
-                      /><span class="little"> Exchange rate: </span
-                      ><span> $1 = ₦570.00 </span></span
+                      ><i class="fa fa-mobile" aria-hidden="true"></i> Mobile
+                      Wallet</span
                     >
-                  </p>
-                </form>
-    
-                <p>SUMMARY</p>
-    
-                <div class="space">
-                  <p class="spread">
-                    <span>Send Amount</span><span>0.00 USD</span>
-                  </p>
-                  <p class="spread"><span> Fees </span><span> 5.00 USD </span></p>
-                  <p class="spread">
-                    <span> Discount </span><span> 0.00 USD </span>
-                  </p>
-                  <p class="spread">
-                    <span> Total to pay </span><span> 0.00 USD </span>
-                  </p>
-                  <p class="spread">
-                    <span> Recipient gets </span><span> 0.00 NGN </span>
-                  </p>
-                </div>
-    
-                <div class="coupon-div">
-                  <div>
-                    <p class="p00">
-                      <span class="coupon round"
-                        ><i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                        <span>Add coupon code</span></span
-                      >
-                    </p>
-                  </div>
-                  <div class="add-coupon">
-                    <div class="main referral">
-                      <p>
-                        <input
-                          required
-                          name="lastName"
-                          placeholder="Coupon Code"
-                          type="text"
-                        />
-                        <button class="bg-none btn-small">Apply</button>
-                      </p>
-                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
                   </div>
                 </div>
-    
-                <button class="button-large">Continue</button>
+                <div class="payment-dropdown dropdown options">
+                  <div file-path="bank-transfer.html">
+                    <i class="fa fa-university" aria-hidden="true"></i> Bank
+                    Transfer
+                  </div>
+                  <div file-path="mobile-money.html">
+                    <i class="fa fa-mobile" aria-hidden="true"></i> Mobile Wallet
+                  </div>
+                  <div file-path="cash-pickup2.html">
+                    <i class="fa fa-money" aria-hidden="true"></i> Cash Pickup
+                  </div>
+                  <div file-path="airtime2.html">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Airtime
+                  </div>
+                </div>
               </div>
 
-              <img src="./images/Nairagram AD.svg" alt="">
+              <!-- select country -->
+
+              <div class="select">
+                <div>
+                  <fieldset class="filedset click payment">
+                    <legend>Send to</legend>
+                    <span>Select Country</span>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </fieldset>
+                </div>
+                <div class="dropdown">
+                  <div class="search">
+                    <input type="text" placeholder="Search" />
+                  </div>
+                  <div class="countries options field">
+                    <div currency="XOF">
+                      <img src="./images/benin.svg" alt="" /> Benin
+                    </div>
+                    <div currency="GHC">
+                      <img src="./images/ghana.svg" alt="" /> Ghana
+                    </div>
+                    <div currency="NGN">
+                      <img src="./images/nigeria.svg" alt="" /> Nigeria
+                    </div>
+                    <div currency="XOF">
+                      <img src="./images/senegal.svg" alt="" /> Senegal
+                    </div>
+                    <div currency="ZAR">
+                      <img src="./images/south-africa.svg" alt="" /> South
+                      Africa
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+
+              <div class="number">
+                <div>+234</div>
+                <fieldset class="filedset">
+                  <legend>Phone number</legend>
+                  <input type="number"/>
+                </fieldset>
+              </div>
+
+              <!-- select country -->
+
+              <div class="country">
+                <div class="choose">
+                  <fieldset class="filedset">
+                    <legend>You send</legend>
+                    <input type="number" value="0.00" />
+                  </fieldset>
+
+                  <div class="click country">
+                    <span class="country-span"
+                      ><img src="./images/USA.svg" alt="" />
+                      <span class="currency-change"> USD </span></span
+                    >
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <div class="search">
+                    <input type="text" placeholder="Search" />
+                  </div>
+                  <div class="countries options">
+                    <div currency="XOF">
+                      <img src="./images/benin.svg" alt="" /> Benin
+                    </div>
+                    <div currency="GHC">
+                      <img src="./images/ghana.svg" alt="" /> Ghana
+                    </div>
+                    <div currency="NGN">
+                      <img src="./images/nigeria.svg" alt="" /> Nigeria
+                    </div>
+                    <div currency="XOF">
+                      <img src="./images/senegal.svg" alt="" /> Senegal
+                    </div>
+                    <div currency="ZAR">
+                      <img src="./images/south-africa.svg" alt="" /> South
+                      Africa
+                    </div>
+                    <div currency="USD">
+                      <img src="./images/USA.svg" alt="" /> United States Of
+                      America
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!--  -->
+              <p class="spread">
+                <span
+                  ><img
+                    src="./images/arrow-decrease-svgrepo-com.png"
+                    alt=""
+                  /><span class="little"> Exchange rate: </span
+                  ><span> $1 = ₦570.00 </span></span
+                >
+              </p>
+            </form>
+
+            <p>SUMMARY</p>
+
+            <div class="space">
+              <p class="spread">
+                <span>Send Amount</span><span>0.00 USD</span>
+              </p>
+              <p class="spread"><span> Fees </span><span> 5.00 USD </span></p>
+              <p class="spread">
+                <span> Discount </span><span> 0.00 USD </span>
+              </p>
+              <p class="spread">
+                <span> Total to pay </span><span> 0.00 USD </span>
+              </p>
+              <p class="spread">
+                <span> Recipient gets </span><span> 0.00 NGN </span>
+              </p>
+            </div>
+
+            <div class="coupon-div">
+              <div>
+                <p class="p00">
+                  <span class="coupon round"
+                    ><i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <span>Add coupon code</span></span
+                  >
+                </p>
+              </div>
+              <div class="add-coupon">
+                <div class="main referral">
+                  <p>
+                    <input
+                      required
+                      name="lastName"
+                      placeholder="Coupon Code"
+                      type="text"
+                    />
+                    <button class="bg-none btn-small">Apply</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a href="./mw-beneficiary.html"><button class="button-large">Continue</button></a>
           </div>
+          
         </div>
       </div>
     </div>

@@ -336,7 +336,7 @@ nav div .btn-bg-green:nth-child(1) {
   padding: 25px 25px 40px 25px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   color: black;
   position: relative;
 }
@@ -2757,7 +2757,7 @@ form.beneficiary-details {
 }
 
 form.beneficiary-details ul {
-  height: 180px;
+  height: 250px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
