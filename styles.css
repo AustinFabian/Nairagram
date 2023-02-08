@@ -34,6 +34,10 @@
   background: #f6f8f9;
 }
 
+.black{
+  color: black !important;
+}
+
 .left {
   text-align: left !important;
 }
@@ -103,6 +107,7 @@ fieldset {
   vertical-align: top;
   min-width: 157px;
   position: relative;
+  transition: .5s all ease;
 }
 
 /* .field-list li div{
@@ -1910,6 +1915,7 @@ ul.field-list li div span {
   color: #e53935;
   padding-left: 15px;
   display: none;
+  transition: .5s all ease;
 }
 
 .acc-v-process ::-webkit-input-placeholder {
@@ -3373,3 +3379,11 @@ table.table-collapse tr > * {
   color: var(--primary-color);
 }
 
+/* responsive version of the pages */
+
+/* index page */
+@media (max-width: 1200px) {
+  nav,.header2,.body1,.body2,.body3,.body4,.body5{
+    padding: 70px;
+  }
+}

@@ -147,7 +147,7 @@ $(document).ready(function () {
     }
   });
 
-  // input in account verfcation process
+  // input in account verification process
 
   $("ul.field-list li fieldset input").each(function () {
     if (!$(this).val() == "") {
@@ -166,9 +166,9 @@ $(document).ready(function () {
         input.parent().css({ borderColor: "#e53935" });
         input.parent().siblings("span").css({ display: "inline-block" });
       } else {
-        input.siblings("legend").css("color", "green");
-        input.parent().css("border-color", "#e3e5e5");
-        input.parent().siblings("span").css("display", "none");
+        input.siblings("legend").css({color:"green"});
+        input.parent().css({borderColor:"#e3e5e5"});
+        input.parent().siblings("span").css({display:"none"});
       }
     })
     .click(function (params) {
@@ -207,6 +207,7 @@ if (selfie) {
   var canvas = document.getElementById("canvas");
 
   if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+    
     navigator.mediaDevices.getUserMedia({video:"true"}).then(function(stream){
       video.srcObject = stream;
       video.onplay()
