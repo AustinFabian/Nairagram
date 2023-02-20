@@ -23,7 +23,7 @@
 }
 
 .red {
-  color: var(--unsuccessful);
+  color: var(--unsuccessful) !important;
 }
 
 .yellow {
@@ -34,7 +34,7 @@
   background: #f6f8f9;
 }
 
-.black{
+.black {
   color: black !important;
 }
 
@@ -54,6 +54,10 @@
   line-height: 30px;
 }
 
+.none{
+  display: none !important;
+}
+
 .lower-alpha-type {
   list-style-type: lower-alpha;
   padding-left: 15px;
@@ -62,6 +66,11 @@
 .disc-type {
   list-style-type: disc;
   padding-left: 15px;
+}
+
+.overflow{
+  overflow: scroll;
+  width: 100%;
 }
 
 a {
@@ -79,6 +88,16 @@ p {
 a:hover {
   text-decoration: none;
 }
+
+.div-under {
+  min-height: 650px;
+  width: 100%;
+  background: white;
+  display: none;
+  cursor: pointer;
+}
+
+
 
 html {
   scroll-behavior: smooth;
@@ -107,7 +126,7 @@ fieldset {
   vertical-align: top;
   min-width: 157px;
   position: relative;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 /* .field-list li div{
@@ -189,14 +208,20 @@ nav ul li a:hover {
   color: #038c33;
 }
 
-nav div {
+nav div span {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
 nav div.logo-div {
+  display: flex;
+  align-items: center;
   gap: 59px;
+}
+
+nav div.button img {
+  display: none;
 }
 
 nav div a {
@@ -331,7 +356,7 @@ nav div .btn-bg-green:nth-child(1) {
   width: 169px;
 }
 
-.body1 > form,
+.body1 form,
 .body1 .form-div form {
   height: fit-content;
   width: 410px;
@@ -723,7 +748,7 @@ div.sendrec > div p {
 }
 
 .flex1 > * {
-  width: 100% !important;
+  width: 279px !important;
   height: 380px;
   border-radius: 10px;
   border: 2px solid transparent;
@@ -794,8 +819,10 @@ div.sendrec > div p {
   gap: 72px;
 }
 
-.body4 .flex {
+.body4 .flex1 {
   gap: 45px;
+  overflow: scroll;
+  width: 50%;
 }
 
 .body4 .flex > * {
@@ -888,7 +915,7 @@ div.sendrec > div p {
 }
 
 .body5 > div:nth-child(2) p:nth-child(2) {
-  font-size: 18px;
+  font-size: 25px;
   width: 444px;
 }
 
@@ -911,7 +938,7 @@ div.sendrec > div p {
 /* before footer */
 
 .before-footer {
-  height: 580px;
+  min-height: 580px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1049,18 +1076,30 @@ footer {
 }
 
 .how-it-works .flex {
-  gap: 0;
+  gap: 50px;
   align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .how-it-works .flex > * {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
   min-height: 300px;
 }
 
+.how-it-works .flex > :nth-child(1) {
+  align-items: flex-start;
+}
+
 .how-it-works .flex > div img {
-  width: 550px;
-  height: 300px;
+  width: 327px;
+  height: 459px;
+  margin: 0 auto;
 }
 
 .div-h-220 {
@@ -1099,15 +1138,24 @@ footer {
 
 /* about-us */
 
-.about-us .flex {
+.call{
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   padding: 34px 90px 200px 112px;
-  flex-wrap: nowrap;
 }
 
-.about-us .flex .div-h-288 {
-  width: 588px;
+.call .asoImg {
+  width: 515px;
+  background-image: url(./images/zumaRock.png);
+  background-position: center;
+  height: 444px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.about-us .call .div-h-288 {
+  width: 30%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1121,20 +1169,11 @@ footer {
   margin-top: 128px;
 }
 
-.about-us .flex .div-h-288 p {
+.about-us .call .div-h-288 p {
   text-align: justify;
 }
 
-.about-us .flex .asoImg {
-  width: 515px;
-  background-image: url(./images/zumaRock.png);
-  background-position: center;
-  height: 444px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.about-us .flex .div-h-288 .btn-bg-green {
+.about-us .call .div-h-288 .btn-bg-green {
   font-size: 18px;
   width: 254px;
   height: 60px;
@@ -1208,7 +1247,6 @@ footer {
 /* loginform styling */
 
 .loginform {
-  min-height: 100vh;
   background: #9ad1ad;
   display: flex;
   align-items: center;
@@ -1560,6 +1598,13 @@ input:checked + .slide {
   background-color: #e9f9ee;
 }
 
+/* signin */
+
+.sign-in .loginform {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 /* send-money-from-home styling starts here */
 
 .header2 nav {
@@ -1675,6 +1720,7 @@ ul.field-list {
   flex-direction: column;
   gap: 10px;
   padding: 0;
+  width: fit-content;
 }
 
 .my-profile .body1 .flex div:nth-child(1) ul li,
@@ -1690,6 +1736,7 @@ ul.field-list li > * {
 
 .my-profile .body1 .lato32px {
   text-align: start;
+  margin-bottom: 20px;
 }
 
 .my-profile .body1 .flex div:nth-child(2) {
@@ -1711,6 +1758,7 @@ ul.field-list li > * {
   border: 2px solid #7bc495;
   padding: 25px 20px;
   transition: 0.2s all ease;
+  background: #f2fcf6;
 }
 
 .my-profile .body1 .flex div:nth-child(2) .complete-registration:hover {
@@ -1915,7 +1963,7 @@ ul.field-list li div span {
   color: #e53935;
   padding-left: 15px;
   display: none;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .acc-v-process ::-webkit-input-placeholder {
@@ -2276,8 +2324,9 @@ ul.field-list li div span {
 /* my recipients page styling starts here */
 
 .my-recipients .body1 div:nth-child(2) {
+  width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: flex-end;
 }
 
@@ -3356,10 +3405,8 @@ table.table-collapse tr > * {
 
 .terms .table-of-content {
   height: fit-content;
-  width: 332px;
-  padding: 15px 25px 30px 25px;
+
   border-radius: 10px;
-  background: #f6f8f9;
 }
 
 .terms .table-of-content ul {
@@ -3383,7 +3430,351 @@ table.table-collapse tr > * {
 
 /* index page */
 @media (max-width: 1200px) {
-  nav,.header2,.body1,.body2,.body3,.body4,.body5{
+  .container > *,
+  nav,
+  .header2,
+  .body1,
+  .body2,
+  .body3,
+  .body4,
+  .body5,
+  .header2 nav {
     padding: 70px;
+  }
+
+  .index .body2 .flex1 > * {
+    width: 279px;
+  }
+
+  .index .body3 .flex,
+  .index .body2 .flex1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .index .body4 .flex {
+    flex-wrap: nowrap !important;
+  }
+
+  .index .body4 .flex > * {
+    width: 270px !important;
+  }
+
+  .before-footer {
+    padding: 60px 10px;
+  }
+
+  .before-footer > div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  /* how it works page */
+
+  .how-it-works .flex > :nth-child(1) {
+    justify-content: center;
+  }
+
+  .how-it-works > div:nth-child(2),
+  .how-it-works > div:nth-child(3),
+  .how-it-works > div:nth-child(4) {
+    padding: 20px;
+  }
+
+  /* user-profile page */
+
+  .my-profile .body1{
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* max-width 1070px */
+
+@media (max-width: 1070px) {
+
+  nav ul {
+    display: none;
+  }
+
+  .body1 > div:nth-child(1) {
+    width: 45%;
+    gap: 10px;
+  }
+
+  .body1 > div:nth-child(1) > p:nth-child(1) {
+    font-size: 48px;
+    width: fit-content;
+    line-height: 60px;
+  }
+
+  .body5 {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .body5 > div:nth-child(2) p:nth-child(1),
+  .body5 > div:nth-child(2) p:nth-child(2) {
+    text-align: center;
+    width: fit-content;
+  }
+
+  nav div.button img {
+    display: block;
+  }
+
+  nav div.button .a,
+  nav div.button a {
+    display: none;
+  }
+
+  .body5 > div:nth-child(2) p:nth-child(2) {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .qr-code-img > img,
+  .forqr {
+    display: none;
+  }
+
+  .body5 > div:nth-child(2) {
+    align-items: center;
+  }
+
+  .before-footer > div:nth-child(1) {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  /* about us */
+
+  .about-us .btn-bg-green{
+    display: none;
+  }
+
+  .about-us .body5{
+    display: none;
+  }
+
+  /* terms and condition page */
+
+  .terms .free-div > div{
+    margin: 0 auto;
+  }
+
+  /* user-profile */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* max-width 786px */
+@media (max-width: 800px) {
+  .index .body1 {
+    height: 557px;
+  }
+
+  .body1 > div:nth-child(1) {
+    width: 60%;
+    gap: 10px;
+  }
+
+  .container > *,
+  nav,
+  .header2,
+  .body1,
+  .body2,
+  .body3,
+  .body4,
+  .body5,
+  .header2 nav {
+    padding: 30px;
+  }
+
+  .body1 {
+    flex-wrap: wrap;
+  }
+
+  .div-under {
+    display: block;
+  }
+
+  .body1 form {
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 150px;
+  }
+
+  .body1 > div:nth-child(1) > p:nth-child(1) {
+    font-size: 36px;
+  }
+
+  /* how it works page */
+  .div-h-220 p:nth-child(4) {
+    width: fit-content;
+  }
+
+  /* signup form */
+  .createaccount .flex > div:first-child {
+    display: none;
+  }
+
+  /* about us  */
+  .call{
+    flex-wrap: wrap;
+  }
+
+  .call .asoImg{
+    width: 100%;
+  }
+
+  .about-us .call .div-h-288{
+    width: 100%;
+  }
+
+  /* terms and condition page */
+
+  .terms .free-div > div{
+    margin: 0;
+  }
+
+  /* my profile page*/
+  .my-profile .body1 .flex{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .my-profile .body1 .flex div:nth-child(1), .width-30-percent{
+    width: fit-content;
+  }
+
+  .my-profile .body1 .flex div:nth-child(2){
+    width: 100%;
+  }
+
+  .leave800{
+    display: none;
+  }
+
+  .come-in-flex800{
+    display: flex !important; 
+  }
+
+  .come-in-block800{
+    display: block !important;
+  }
+
+  /* my-recipients */
+
+  .my-recipients p{
+    width: 100%;
+  }
+
+  .my-recipients .long-input{
+    width: 100%;
+  }
+
+  .my-recipients .body1 div:nth-child(2){
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 664px) {
+  .body1 form {
+    /* margin-top: 450px; */
+  }
+  .body1 > div:nth-child(1) > p:nth-child(1) {
+    line-height: 40px;
+  }
+}
+/* max-width 600px */
+
+@media (max-width: 600px) {
+  .body1 form {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .div-under {
+    padding: 0 !important;
+  }
+
+  .body5 > div:nth-child(1) > img {
+    width: 300px;
+    height: 331px;
+    margin-top: 50px;
+  }
+
+  /* sign-in page */
+
+  .sign-in .before-footer,
+  .sign-in footer {
+    display: none;
+  }
+
+  .sign-in .loginform {
+    background: white;
+  }
+
+  .sign-in .loginform form {
+    box-shadow: none;
+  }
+
+  /* about us page */
+  
+}
+
+@media (max-width: 500px) {
+  .sign-in .loginform form {
+    width: 400px;
+  }
+
+  .my-recipients .body1{
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 400px) {
+  .sign-in .loginform form {
+    width: 300px;
   }
 }
