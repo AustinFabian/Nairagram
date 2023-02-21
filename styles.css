@@ -2334,6 +2334,7 @@ ul.field-list li div span {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 
 .my-recipients .body1 div:nth-child(2) p .little {
